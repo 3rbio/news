@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>3rb.io News Page</title>
     <link rel="icon" href="../favicon.ico" type="image/png" />
+    <!-- Use relative paths -->
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/news.css" />
     <link
@@ -13,7 +14,6 @@
     />
   </head>
   <body>
-    <div id="header-container"></div>
     <header>
       <div class="header-branding">
         <div class="brand-left">
@@ -30,11 +30,12 @@
           <a href="https://docs.3rb.io/" target="_blank" data-i18n="docs">
             Docs
           </a> 
-          <a href="updates.html" target="_self" data-i18n="game_updates"></a>
-          <a href="fixes.html" target="_self" data-i18n="game_fixes"></a>
+          <a href="./updates.html" target="_self" data-i18n="game_updates">Updates</a>
+          <a href="./fixes.html" target="_self" data-i18n="game_fixes">Fixes</a>
         </nav>
       </div>
 
+      <!-- language switcher stays the same -->
       <div class="header-controls">
         <div id="custom-lang-switch" class="lang-switch-dropdown">
           <button
@@ -44,32 +45,22 @@
           >
             <span id="current-lang-flag" data-lang="ar">🌐</span>
           </button>
-
           <ul id="lang-list" class="lang-list" role="listbox">
             <li role="option" data-lang="ar" data-flag="🇸🇦" data-name="العربية">
               🇸🇦 العربية
             </li>
-
             <li role="option" data-lang="en" data-flag="🇬🇧" data-name="English">
               🇬🇧 English
             </li>
-
             <li role="option" data-lang="es" data-flag="🇪🇸" data-name="Español">
               🇪🇸 Español
             </li>
-            <li
-              role="option"
-              data-lang="fr"
-              data-flag="🇫🇷"
-              data-name="Français"
-            >
+            <li role="option" data-lang="fr" data-flag="🇫🇷" data-name="Français">
               🇫🇷 Français
             </li>
-
             <li role="option" data-lang="ru" data-flag="🇷🇺" data-name="Русский">
               🇷🇺 Русский
             </li>
-
             <li role="option" data-lang="tr" data-flag="🇹🇷" data-name="Türkçe">
               🇹🇷 Türkçe
             </li>
