@@ -1,80 +1,32 @@
-// 3rb.io Multilingual Script
-//     ===
+// ===========================
+// Language and Translation Logic
+// ===========================
 
 const defaultLang = "ar";
 const savedLang = localStorage.getItem("lang");
 const langToUse = savedLang || defaultLang;
 
-//   ==
-// DOM Elements
-//   ==
 const langList = document.getElementById("lang-list");
 const langDisplayButton = document.querySelector(".current-lang-display");
 const currentLangFlag = document.getElementById("current-lang-flag");
 
-//   ==
-
-// Functions
-//   ==
-
-// Dynamic Language Loader
-//   ==
-/* function loadLanguage(lang) {
+async function loadLanguage(lang) {
   return new Promise((resolve, reject) => {
-    const script = document.createElement("script");
+    // prevent reloading the same script twice
+    if (document.querySelector(`script[data-lang-script="${lang}"]`)) {
+      resolve();
+      return;
+    }
 
+    const script = document.createElement("script");
     script.src = `assets/lang/${lang}.js`;
+    script.dataset.langScript = lang;
     script.onload = () => resolve();
     script.onerror = () => reject(`Could not load language file: ${lang}`);
     document.head.appendChild(script);
   });
-} */
-
-function loadLanguage(lang) {
-  return new Promise((resolve, reject) => {
-    const script = document.createElement("script");
-    const path = window.location.pathname;
-    console(`path is ` + path);
-    const isLocal = window.location.protocol === "file:";
-
-    let srcPath = "";
-
-    if (isLocal) {
-      // 🖥 Local testing (file://) - Use RELATIVE path
-      if (
-        path.includes("/fixes") ||
-        path.includes("/news") ||
-        path.includes("/updates")
-      ) {
-        // We are in a subfolder, so go up one level (..) to find assets/
-        srcPath = "../assets/lang/" + lang + ".js";
-      } else {
-        // We are at the root index.html, so access assets/ directly
-        srcPath = "assets/lang/" + lang + ".js";
-      }
-    } else {
-      // 🌐 Live Server (http/https) - Use ABSOLUTE path from domain root (/)
-      // This is the most reliable path for ANY live server (unless it's a specific GitHub Pages repo)
-      srcPath = "/assets/lang/" + lang + ".js";
-
-      // IMPORTANT: If you are on GitHub Pages (user.github.io/repo-name/)
-      /*
-      if (window.location.hostname.includes("github.io")) {
-         const pathSegments = path.split('/').filter(Boolean);
-         const repoName = pathSegments[0] || ""; 
-         srcPath = `/${repoName}/assets/lang/${lang}.js`;
-      }
-      */
-    }
-
-    // Load the script
-    script.src = srcPath;
-    script.onload = () => resolve();
-    script.onerror = () =>
-      reject(`Could not load language file: ${script.src}`);
-    document.head.appendChild(script);
-  });
 }
+
 function updateLangDisplay(lang) {
   langList.querySelectorAll("li").forEach((li) => {
     li.classList.remove("selected");
@@ -92,29 +44,26 @@ function updateLangDisplay(lang) {
 }
 
 function applyTranslations(lang) {
+  if (!window.translations || !translations[lang]) {
+    console.error(`No translations found for ${lang}`);
+    return;
+  }
+
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
-    if (translations[lang] && translations[lang][key]) {
+    if (translations[lang][key]) {
       el.textContent = translations[lang][key];
-      if (key === "site_title") {
-        document.title = translations[lang][key];
-      }
+      if (key === "site_title") document.title = translations[lang][key];
     }
   });
 
   // RTL support
-  if (lang === "ar") {
-    document.body.classList.add("rtl");
-  } else {
-    document.body.classList.remove("rtl");
-  }
+  document.body.classList.toggle("rtl", lang === "ar");
 
-  // انعكاس heroBanner تلقائي
+  // Adjust hero banner layout
   const hero = document.querySelector(".heroBanner .container");
-  if (lang === "ar") {
-    hero.style.gridTemplateColumns = "1.5fr 1fr"; // النص أولًا
-  } else {
-    hero.style.gridTemplateColumns = "1fr 1.5fr"; // الصورة أولًا
+  if (hero) {
+    hero.style.gridTemplateColumns = lang === "ar" ? "1.5fr 1fr" : "1fr 1.5fr";
   }
 }
 
@@ -123,24 +72,32 @@ function toggleDropdown() {
   langDisplayButton.setAttribute("aria-expanded", isVisible);
 }
 
-//   ==
-// Event Listeners
-//   ==
+// ===========================
+// Language Events
+// ===========================
+
 langDisplayButton.addEventListener("click", toggleDropdown);
 
-langList.addEventListener("click", (e) => {
-  if (e.target.tagName === "LI") {
-    const newLang = e.target.getAttribute("data-lang");
+langList.addEventListener("click", async (e) => {
+  const li = e.target.closest("li");
+  if (!li) return;
+
+  const newLang = li.getAttribute("data-lang");
+  try {
+    await loadLanguage(newLang);
     applyTranslations(newLang);
     updateLangDisplay(newLang);
     localStorage.setItem("lang", newLang);
     toggleDropdown();
+  } catch (err) {
+    console.error(err);
   }
 });
-// Close dropdown when clicking outside
+
 document.addEventListener("click", (e) => {
   const customSwitch = document.getElementById("custom-lang-switch");
   if (
+    customSwitch &&
     !customSwitch.contains(e.target) &&
     langList.classList.contains("visible")
   ) {
@@ -148,9 +105,10 @@ document.addEventListener("click", (e) => {
   }
 });
 
-//   ==
+// ===========================
 // Initialize Page
-//   ==
+// ===========================
+
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     await loadLanguage(langToUse);
@@ -161,25 +119,21 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error(err);
   }
 
-  //    =====
+  // ===========================
   // Expand Button Logic
-  //    =====
+  // ===========================
   const newsCards = document.querySelectorAll(".news-card");
 
   const collapseCard = (card) => {
     card.setAttribute("data-expanded", "false");
-    const expandBtn = card.querySelector(".expand-btn");
-    const details = card.querySelector(".news-details");
-    expandBtn.setAttribute("aria-expanded", "false");
-    details.setAttribute("aria-hidden", "true");
+    card.querySelector(".expand-btn").setAttribute("aria-expanded", "false");
+    card.querySelector(".news-details").setAttribute("aria-hidden", "true");
   };
 
   const expandCard = (card) => {
     card.setAttribute("data-expanded", "true");
-    const expandBtn = card.querySelector(".expand-btn");
-    const details = card.querySelector(".news-details");
-    expandBtn.setAttribute("aria-expanded", "true");
-    details.setAttribute("aria-hidden", "false");
+    card.querySelector(".expand-btn").setAttribute("aria-expanded", "true");
+    card.querySelector(".news-details").setAttribute("aria-hidden", "false");
   };
 
   newsCards.forEach((card) => {
@@ -192,7 +146,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         collapseCard(card);
         return;
       }
-      // Collapse all others
       newsCards.forEach((otherCard) => {
         if (otherCard !== card) collapseCard(otherCard);
       });
@@ -205,13 +158,10 @@ document.addEventListener("DOMContentLoaded", async () => {
       toggleCard();
     });
   });
-});
 
-document.querySelector(".site-title").addEventListener("click", () => {
-  window.location.href = "index.html";
-});
-// Mobile menu toggle
-document.addEventListener("DOMContentLoaded", () => {
+  // ===========================
+  // Mobile Menu Toggle
+  // ===========================
   const toggle = document.querySelector(".menu-toggle");
   const mobileNav = document.querySelector(".mobile-nav");
 
@@ -220,96 +170,43 @@ document.addEventListener("DOMContentLoaded", () => {
       mobileNav.classList.toggle("show");
     });
 
-    // Optional: close when clicking outside
     document.addEventListener("click", (e) => {
       if (!toggle.contains(e.target) && !mobileNav.contains(e.target)) {
         mobileNav.classList.remove("show");
       }
     });
   }
-});
 
-/* r */
-
-document.addEventListener("DOMContentLoaded", async () => {
-  if (!skipTranslation) {
-    try {
-      await loadLanguage(langToUse);
-      applyTranslations(langToUse);
-      updateLangDisplay(langToUse);
-      if (!savedLang) localStorage.setItem("lang", defaultLang);
-    } catch (err) {
-      console.error(err);
-    }
-  } else {
-    console.log("Translation disabled on index.html");
-  }
-
-  // Expand button logic and other scripts can run normally
-  const newsCards = document.querySelectorAll(".news-card");
-  newsCards.forEach((card) => {
-    const expandBtn = card.querySelector(".expand-btn");
-    const header = card.querySelector(".card-header");
-
-    const collapseCard = (card) => {
-      card.setAttribute("data-expanded", "false");
-      card.querySelector(".expand-btn").setAttribute("aria-expanded", "false");
-      card.querySelector(".news-details").setAttribute("aria-hidden", "true");
-    };
-
-    const expandCard = (card) => {
-      card.setAttribute("data-expanded", "true");
-      card.querySelector(".expand-btn").setAttribute("aria-expanded", "true");
-      card.querySelector(".news-details").setAttribute("aria-hidden", "false");
-    };
-
-    const toggleCard = () => {
-      const isExpanded = card.getAttribute("data-expanded") === "true";
-      if (isExpanded) {
-        collapseCard(card);
-        return;
-      }
-      newsCards.forEach((otherCard) => {
-        if (otherCard !== card) collapseCard(otherCard);
-      });
-      expandCard(card);
-    };
-
-    expandBtn.addEventListener("click", toggleCard);
-    header.addEventListener("click", (e) => {
-      if (e.target.closest(".expand-btn")) return;
-      toggleCard();
+  // ===========================
+  // Site Title Click (Home)
+  // ===========================
+  const siteTitle = document.querySelector(".site-title");
+  if (siteTitle) {
+    siteTitle.addEventListener("click", () => {
+      window.location.href = "index.html";
     });
-  });
+  }
 });
+
+// ===========================
+// Splash Screen
+// ===========================
+
 window.addEventListener("load", () => {
   const splash = document.getElementById("splash");
   const body = document.body;
-
-  setTimeout(() => {
-    splash.classList.add("fade-out");
-    body.classList.remove("no-scroll");
-  }, 1000); // show for 3 seconds
-});
-
-document.addEventListener("click", (e) => {
-  const customSwitch = document.getElementById("custom-lang-switch");
-  if (
-    !customSwitch.contains(e.target) &&
-    langList.classList.contains("visible")
-  ) {
-    toggleDropdown();
+  if (splash) {
+    setTimeout(() => {
+      splash.classList.add("fade-out");
+      body.classList.remove("no-scroll");
+    }, 1000);
   }
 });
 
-//   ==
-// Initialize on DOM Ready
-//   ==
-document.addEventListener("DOMContentLoaded", () => {
-  const savedLang = localStorage.getItem("lang") || "ar";
-  applyTranslations(savedLang);
-  updateLangDisplay(savedLang);
-});
+// ===========================
+// Load Header & Footer
+// ===========================
+
 function loadHTML(selector, file) {
   fetch(file)
     .then((response) => response.text())
@@ -319,6 +216,5 @@ function loadHTML(selector, file) {
     .catch((err) => console.error(`Failed to load ${file}: ${err}`));
 }
 
-// Load header and footer
 loadHTML("#header-container", "header.html");
 loadHTML("#footer-container", "footer.html");

@@ -5,6 +5,7 @@ window.translations["ar"] = {
   visit_game: "زيارة اللعبة",
   game_news: "الأخبار",
   game_fixes: "الإصلاحات",
+  game_updates: "التحديثات",
   docs: "المستندات",
   hero_title: "مرحبًا بك في اخر اخبار اقاريو العربية",
   hero_follow: "... تابع هنا",

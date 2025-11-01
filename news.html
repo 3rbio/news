@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>3rb.io News Page</title>
-    <link rel="icon" href="../favicon.ico" type="image/png" />
-    <link rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="stylesheet" href="../assets/css/news.css" />
+    <link rel="icon" href="favicon.ico" type="image/png" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/news.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -16,26 +16,22 @@
     <div id="header-container"></div>
     <header>
       <div class="header-branding">
-            <div class="header-branding">
         <div class="brand-left">
-          <a href="../index.html"  > 
-            <img src="../favicon.ico" alt="3rb.io Logo" class="logo" />
+          <img src="favicon.ico" alt="3rb.io Logo" class="logo" />
           <span class="site-title" data-i18n="site_title">3rb.io News</span>
-        </a> 
-      </div>
+        </div>
 
-        <!-- Hamburger icon for mobile -->
         <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
 
-        <!-- Dropdown navigation -->
         <nav class="mobile-nav">
-          <a href="https://3rb.io" target="_blank" data-i18n="visit_game"
-            >Visit Game</a
-          >
-          <a href="https://docs.3rb.io/" target="_blank" data-i18n="docs"
-            >Docs</a
-          >
-           <a href="../fixes/index.html" target="_self" data-i18n="game_fixes"> </a>
+          <a href="https://3rb.io" target="_blank" data-i18n="visit_game">
+            Visit Game
+          </a>
+          <a href="https://docs.3rb.io/" target="_blank" data-i18n="docs">
+            Docs
+          </a> 
+          <a href="updates.html" target="_self" data-i18n="game_updates"></a>
+          <a href="fixes.html" target="_self" data-i18n="game_fixes"></a>
         </nav>
       </div>
 
@@ -61,7 +57,6 @@
             <li role="option" data-lang="es" data-flag="🇪🇸" data-name="Español">
               🇪🇸 Español
             </li>
-
             <li
               role="option"
               data-lang="fr"
@@ -71,12 +66,12 @@
               🇫🇷 Français
             </li>
 
-            <li role="option" data-lang="tr" data-flag="🇹🇷" data-name="Türkçe">
-              🇹🇷 Türkçe
-            </li>
-
             <li role="option" data-lang="ru" data-flag="🇷🇺" data-name="Русский">
               🇷🇺 Русский
+            </li>
+
+            <li role="option" data-lang="tr" data-flag="🇹🇷" data-name="Türkçe">
+              🇹🇷 Türkçe
             </li>
           </ul>
         </div>
@@ -85,60 +80,7 @@
 
     <main id="news-container">
       <h1 class="page-title" data-i18n="newsPage_Title">Latest Game News</h1>
-      <article
-        class="news-card"
-        data-expanded="false"
-        role="region"
-        aria-label="News Event: Spooky Season Event: The Midnight Haunt!"
-      >
-        <div class="card-header" tabindex="0" aria-controls="details-2">
-          <img
-            src="../assets/images/news/vipSkins.png"
-            alt="Halloween Event Promotion Image"
-            class="news-image-preview"
-          />
-          <div class="header-content">
-            <h2 class="news-title" data-i18n="vip_news_title"></h2>
-            <p class="news-date">
-              <time datetime="2025-10-20">October 20, 2025</time>
-              <span class="news-tag event-tag">VIP Update</span>
-            </p>
-          </div>
-          <button
-            class="expand-btn"
-            aria-expanded="false"
-            aria-controls="details-2"
-            aria-label="Expand news details"
-          >
-            <i class="fas fa-chevron-down icon"></i>
-          </button>
-        </div>
-
-        <div class="news-details" id="details-2" aria-hidden="true">
-          <p class="news-preview" data-i18n="vip_news_preview"></p>
-
-          <div class="full-content">
-            <p data-i18n="vip_full_content"></p>
-            <h3 data-i18n="vip_feature_title">
-              <span class="feature-icon">🎃</span>
-            </h3>
-            <ul class="vip-features">
-              <li data-i18n="vip_feature_one"></li>
-              <li data-i18n="vip_feature_two"></li>
-              <li data-i18n="vip_feature_three"></li>
-              <li data-i18n="vip_feature_four"></li>
-            </ul>
-
-            <img
-              src="../assets/images/news/vipSkins.png"
-              alt="Detailed image of event cosmetics"
-              class="news-image-full"
-            />
-            <p class="vip_feature_x" data-i18n="vip_feature_x"></p>
-            <p class="vip_feature_xi" data-i18n="vip_feature_xi"></p>
-          </div>
-        </div>
-      </article>
+      
       <article
         class="news-card"
         data-expanded="false"
@@ -147,7 +89,7 @@
       >
         <div class="card-header" tabindex="0" aria-controls="details-1">
           <img
-            src="../assets/images/news/levels.png"
+            src="assets/images/news/levels.png"
             alt="New Desert Region Preview"
             class="news-image-preview"
           />
@@ -189,7 +131,7 @@
               <li data-i18n="leves_feature_six"></li>
             </ul>
             <img
-              src="../assets/images/news/levels.png"
+              src="assets/images/news/levels.png"
               alt="Detailed image of the new Sand Drake boss"
               class="news-image-full"
             />
@@ -203,11 +145,65 @@
         class="news-card"
         data-expanded="false"
         role="region"
+        aria-label="News Event: Spooky Season Event: The Midnight Haunt!"
+      >
+        <div class="card-header" tabindex="0" aria-controls="details-2">
+          <img
+            src="assets/images/news/vipSkins.png"
+            alt="Halloween Event Promotion Image"
+            class="news-image-preview"
+          />
+          <div class="header-content">
+            <h2 class="news-title" data-i18n="vip_news_title"></h2>
+            <p class="news-date">
+              <time datetime="2025-10-20">October 20, 2025</time>
+              <span class="news-tag event-tag">VIP Update</span>
+            </p>
+          </div>
+          <button
+            class="expand-btn"
+            aria-expanded="false"
+            aria-controls="details-2"
+            aria-label="Expand news details"
+          >
+            <i class="fas fa-chevron-down icon"></i>
+          </button>
+        </div>
+
+        <div class="news-details" id="details-2" aria-hidden="true">
+          <p class="news-preview" data-i18n="vip_news_preview"></p>
+
+          <div class="full-content">
+            <p data-i18n="vip_full_content"></p>
+            <h3 data-i18n="vip_feature_title">
+              <span class="feature-icon">🎃</span>
+            </h3>
+            <ul class="vip-features">
+              <li data-i18n="vip_feature_one"></li>
+              <li data-i18n="vip_feature_two"></li>
+              <li data-i18n="vip_feature_three"></li>
+              <li data-i18n="vip_feature_four"></li>
+            </ul>
+
+            <img
+              src="assets/images/news/vipSkins.png"
+              alt="Detailed image of event cosmetics"
+              class="news-image-full"
+            />
+            <p class="vip_feature_x" data-i18n="vip_feature_x"></p>
+            <p class="vip_feature_xi" data-i18n="vip_feature_xi"></p>
+          </div>
+        </div>
+      </article>
+      <article
+        class="news-card"
+        data-expanded="false"
+        role="region"
         aria-label="News Update: Patch 2.1: The Desert Scourge"
       >
         <div class="card-header" tabindex="0" aria-controls="details-1">
           <img
-            src="../assets/images/news/friendsList.png"
+            src="assets/images/news/friendsList.png"
             alt="New Desert Region Preview"
             class="news-image-preview"
           />
@@ -246,7 +242,7 @@
             </ul>
             <p data-i18n="friends_feature_x"></p>
             <img
-              src="../assets/images/news/friendsList.png"
+              src="assets/images/news/friendsList.png"
               alt="Detailed image of the new Sand Drake boss"
               class="news-image-full"
             />
@@ -260,7 +256,7 @@
     <footer class="site-footer">
       <div class="footer-container">
         <div class="footer-brand">
-          <img src="../logo.png" alt="3rb.io Logo" class="footer-logo" />
+          <img src="logo.png" alt="3rb.io Logo" class="footer-logo" />
           <p class="footer-desc" data-i18n="footer_desc"></p>
         </div>
 
@@ -305,6 +301,6 @@
       </div>
     </footer>
     <div id="footer-container"></div>
-    <script src="../script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

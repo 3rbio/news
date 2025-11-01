@@ -5,6 +5,7 @@ window.translations["en"] = {
   visit_game: "Visit Game",
   game_news: "News",
   game_fixes: "Fixes",
+  game_updates: "Updates",
   docs: "Docs",
   hero_title: "Welcome to the latest 3rb.io news",
   hero_follow: "Follow here",

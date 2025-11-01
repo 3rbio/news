@@ -5,6 +5,7 @@ window.translations["ru"] = {
   visit_game: "Посетить игру",
   game_news: "Новости игры",
   game_fixes: "Исправления",
+  game_updates: "Обновления",
   docs: "Документация",
   hero_title: "Добро пожаловать в последние новости 3rb.io",
   hero_follow: "Следите здесь",
