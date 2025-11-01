@@ -34,6 +34,7 @@ function loadLanguage(lang) {
   return new Promise((resolve, reject) => {
     const script = document.createElement("script");
     const path = window.location.pathname;
+    console(`path is ` + path);
     const isLocal = window.location.protocol === "file:";
 
     let srcPath = "";
@@ -241,7 +242,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       console.error(err);
     }
   } else {
-    console.log("Translation disabled on fixes.html");
+    console.log("Translation disabled on index.html");
   }
 
   // Expand button logic and other scripts can run normally
