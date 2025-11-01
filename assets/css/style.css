@@ -1,0 +1,1031 @@
+@font-face {
+  font-family: "GHFont"; /* Give your font a name */
+  src: url("../fonts/Ubuntu-Arabic_R.ttf") format("truetype");
+  font-weight: normal; /* You can specify normal, bold, etc. */
+  font-style: normal; /* You can specify normal, italic, etc. */
+}
+
+h1,
+h2,
+h3, /* Added h3 */
+h4,
+h5,
+h6,
+button,
+input {
+  font-family: "GHFont", sans-serif;
+}
+
+/* 3rb.io News Demo Style */
+:root {
+  --darkbg: #0d0e16;
+  --text-color: #f2f2f2;
+  --card-bg: #1c1c1e;
+  --highlight-color: #ffcc00;
+  --primary-color: #ff0066;
+  --hoverColor: #1e9ce3;
+  --line: #363a47;
+  --secondary-btn-bg: #282a37; /* New variable for secondary button */
+  --darktext: #99aab5;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--darkbg); /* dark background */
+  color: var(--text-color); /* light text */
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s, direction 0.3s;
+  font-family: "GHFont", sans-serif;
+  max-width: 1240px;
+  margin: 0rem auto 0;
+  overflow-y: scroll; /* ensure scroll always available */
+  overflow-x: hidden;
+}
+
+/* --- Splash Screen Styles --- */
+#splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--darkbg, #000);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+#splash.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#splash img {
+  width: 30%;
+  height: auto;
+}
+
+/* Hide scroll while splash is active */
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* For Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 8px; /* scrollbar width */
+  background: transparent; /* transparent track */
+}
+
+/* Remove scrollbar buttons (arrows) */
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Make the scrollbar thumb invisible by default */
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+/* Show thumb only when scrolling or hovering */
+body:hover::-webkit-scrollbar-thumb {
+  background-color: var(--hoverColor);
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--hoverColor);
+}
+
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+html:hover {
+  scrollbar-color: var(--hoverColor) transparent;
+}
+/* === HEADER STYLES (UNCHANGED PER REQUEST) === */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  background-color: var(--darkbg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.7rem;
+  flex-direction: row;
+  border-bottom: 1px solid var(--line);
+  color: var(--text-color);
+}
+
+/* ... Existing header-branding, logo, site-title, header-controls, header-btn styles ... */
+.header-branding {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.logo {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+
+.site-title {
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.brand-left a {
+  text-decoration: none; /* remove underline */
+  color: inherit; /* keep the same text color */
+  display: flex; /* keep logo and title aligned */
+  align-items: center;
+  gap: 0.5rem; /* small space between logo & text */
+}
+
+.brand-left a:hover .site-title {
+  opacity: 0.8; /* optional hover effect */
+}
+.header-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* === RTL MODE (UNCHANGED PER REQUEST) === */
+body.rtl header {
+  flex-direction: row-reverse;
+}
+
+body.rtl .header-branding {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+body.rtl .logo {
+  order: 2;
+}
+
+body.rtl .site-title {
+  order: 1;
+}
+
+body.rtl #news,
+body.rtl #news-container,
+body.rtl h2,
+body.rtl .h2 {
+  text-align: right !important;
+}
+
+.header-btn {
+  color: var(--text-color);
+  border: none;
+  padding: 0.4rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+.header-btn:hover {
+  color: var(--hoverColor);
+}
+
+/* === CUSTOM LANGUAGE SWITCH STYLES (UNCHANGED PER REQUEST) === */
+.lang-switch-dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 999999;
+}
+
+.current-lang-display {
+  background: var(--darkbg);
+
+  border: none;
+  color: var(--text-color);
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s, border-color 0.2s;
+  width: 50px;
+  height: 38px;
+}
+
+.current-lang-display:hover {
+  background: var(--hoverColor);
+}
+
+.current-lang-display span {
+  font-size: 1.2rem;
+}
+
+.lang-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 0;
+  min-width: 150px;
+  background: var(--darkbg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+
+.lang-list.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.lang-list li {
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.15s;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.lang-list li:first-child {
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+.lang-list li:last-child {
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.lang-list li:hover {
+  background-color: #2a2a2d;
+  color: var(--hoverColor);
+}
+
+.lang-list li.selected {
+  background-color: var(--hoverColor);
+  color: var(--darkbg);
+  font-weight: bold;
+}
+
+/* === BUTTON STYLES (NEW) === */
+.btn-primary {
+  background-color: var(--hoverColor);
+  color: var(--darkbg); /* Darker text for primary button */
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px; /* Pill shape for a modern look */
+  text-decoration: none;
+  opacity: 0.8;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  /* New style for the "View All News" button */
+  display: inline-block;
+  background-color: var(--secondary-btn-bg);
+  color: var(--text-color);
+  padding: 0.6rem 1.2rem;
+  border: 1px solid var(--line);
+  text-decoration: none;
+  transition: background-color 0.2s, border-color 0.2s;
+  font-weight: 500;
+}
+
+.btn-secondary:hover {
+  background-color: var(--card-bg);
+  border-color: var(--hoverColor);
+  color: var(--hoverColor);
+}
+/* ======================================================= */
+/* === HERO BANNER STYLES (NEW AMAZING DESIGN) === */
+/* ======================================================= */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroBanner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(-135deg, #1e9ce333, #0000 70%);
+  border-radius: 16px;
+  margin: 1rem;
+  min-height: 640px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Container uses grid for image + text */
+.heroBanner .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1240px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+  flex-direction: row; /* LTR default: image left, text right */
+}
+
+/* Hero image styling */
+.hero-image img {
+  max-width: 650px;
+  border-radius: 12px;
+  object-fit: cover;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+}
+
+/* Text column styling */
+.heroBanner .text-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  text-align: right;
+  transition: all 0.3s ease;
+}
+
+/* Main title */
+.heroBanner .text-info h1 {
+  line-height: 1.4;
+  font-size: 48px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Paragraph text */
+.heroBanner .text-info p {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 0;
+  color: #c0c4d8;
+}
+
+/* Highlight word "تابع هنا" */
+.heroBanner .text-info .highlight {
+  display: block; /* يجعلها في سطر مستقل */
+  font-size: 32px; /* أكبر من باقي الفقرة */
+  font-weight: 900;
+  color: #1e9ce3; /* لون مميز يتماشى مع ألوان الموقع */
+  margin-bottom: 8px; /* مسافة بين الكلمة وبقية النص */
+}
+
+body:not(.rtl) .heroBanner .container {
+  flex-direction: row-reverse;
+}
+
+body.rtl .heroBanner .text-info {
+  align-items: flex-end;
+  text-align: right;
+}
+
+body:not(.rtl) .heroBanner .text-info {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.section-heading {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  padding: 0 0.5rem 0.5rem;
+  border-bottom: 2px solid var(--line, #3498db);
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  direction: rtl; /* Ensures text flows right-to-left */
+}
+
+/* === CARD STYLES (IMPROVED) === */
+/* Using Flexbox/Grid for a better news layout on wider screens */
+.news {
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+}
+
+/* --- Card Container Styles --- */
+
+.card-grid {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  margin: 1rem;
+  padding: 40px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.card {
+  background: linear-gradient(145.35deg, #575d7580 -179.88%, #41465a00 24.3%),
+    #14151e;
+  border-radius: 12px; /* Smooth rounded corners */
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Soft shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 5px solid transparent; /* Used for type distinction */
+  width: 750px;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Lift card slightly on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* Enhanced shadow on hover */
+}
+
+/* === Default (LTR) === */
+.card__meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 0.85em;
+  color: #666;
+  text-transform: uppercase;
+  flex-direction: row; /* default left-to-right */
+}
+
+.card__title,
+.card__excerpt,
+.card__link,
+.card__fix-list {
+  text-align: left; /* default */
+}
+
+.card__icon {
+  font-size: 1.2em; /* Make the icon/emoji a bit larger */
+}
+
+.card__category {
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 5px;
+  /* Default color for general news */
+  background: #e6f7ff;
+  color: #007bff;
+}
+
+/* --- Fixes Card Specific Styling --- */
+.card--news {
+  border-left-color: #00ffff;
+}
+.card__category--news {
+  background: #232534;
+  color: #00ffff;
+}
+.news_title {
+  color: #00ffff !important;
+}
+
+.card--fixes {
+  /* Change the left border color for Fixes cards */
+  border-left-color: #ffc107;
+}
+
+.card--update {
+  border-left-color: green;
+}
+
+.fixes_title {
+  color: #ffc107 !important;
+}
+
+.card__category--update {
+  background: #232534;
+  color: green;
+}
+.updates_title {
+  color: green !important;
+}
+.card__category--fix {
+  /* Change the tag color for Fixes */
+  background: #232534;
+  color: #ffc107;
+}
+
+.card_enOnly {
+  background: #232534;
+  color: #1f7a96;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-weight: bold;
+
+  /* Push to the right in flex container */
+  margin-left: auto;
+}
+/* Style for the list of fixes */
+.card__fix-list {
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.card__fix-list li {
+  line-height: 1.6;
+  margin-bottom: 5px;
+}
+
+/* --- Title and Link Styles --- */
+.card__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 1.5em;
+}
+
+.card__link,
+.card_link_fixes {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--darktext);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.card__link:hover {
+  text-decoration: underline;
+}
+
+body.rtl .news_title,
+body.rtl .updates_title,
+body.rtl .card__excerpt {
+  text-align: right; /* align text to right */
+}
+body.rtl .card__link {
+  display: block; /* take full width */
+  text-align: right; /* align text to right */
+}
+/* Responsive adjustment for Hero banner */
+/* @media (max-width: 900px) {
+  .heroBanner {
+    padding: 50px 20px;
+  }
+  .heroBanner .container {
+    grid-template-columns: 1fr;  
+    justify-content: center;
+    text-align: center;
+    gap: 40px;
+  }
+  .heroBanner .text-info {
+    text-align: center; 
+    order: 2;  
+  }
+  .heroBanner .text-info h1 {
+    text-align: center;
+  }
+  body.rtl .heroBanner .text-info h1,
+  body.rtl .heroBanner .text-info {
+    text-align: center;  
+  }
+
+  .heroBanner .text-info p {
+    max-width: 100%;
+  }
+}
+ */
+/* === FOOTER STYLES === */
+
+.site-footer {
+  background-color: #14151e;
+  color: #c0c4d8;
+  padding: 3rem 1.5rem 1.5rem 1.5rem;
+  font-family: "Inter", sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-brand {
+  display: flex; /* make it a flex container */
+  flex-direction: column; /* stack logo and description vertically */
+  align-items: center; /* center horizontally */
+  text-align: center; /* ensure text in description is centered */
+  flex: 1 1 250px;
+}
+
+.footer-logo {
+  width: 150px;
+  margin-bottom: 0.8rem;
+}
+
+.footer-desc {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #a0a4b8;
+}
+
+.footer-links,
+.footer-social {
+  flex: 1 1 200px;
+}
+
+.footer-links h4,
+.footer-social h4 {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.footer-links ul,
+.footer-social ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li,
+.footer-social li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a,
+.footer-social a {
+  text-decoration: none;
+  color: #c0c4d8;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+  color: var(--hoverColor); /* Accent color */
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #888ca0;
+  border-top: 1px solid #2a2d3a;
+  padding-top: 1rem;
+}
+
+/* === MOBILE DROPDOWN NAVIGATION === */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.mobile-nav {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.mobile-nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.mobile-nav a:hover {
+  background-color: var(--hoverColor);
+  color: #fff;
+}
+
+/* Responsive Behavior */
+@media (max-width: 768px) {
+  #splash img {
+    width: 70%;
+    height: auto;
+  }
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: var(--darkbg);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    width: 180px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+
+  .mobile-nav.show {
+    display: flex;
+    animation: dropdownFade 0.25s ease;
+  }
+
+  @keyframes dropdownFade {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Header: stack buttons and shrink logo */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .header-branding {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .header-btn {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .logo {
+    height: 28px;
+  }
+}
+
+/* Hero section: stack image + text */
+@media (max-width: 768px) {
+  .heroBanner {
+    flex-direction: column;
+    padding: 1.5rem;
+    min-height: auto;
+    height: 100vh;
+  }
+
+  .heroBanner .container {
+    flex-direction: column !important;
+    gap: 1.5rem;
+  }
+
+  .heroBanner .hero-image img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .heroBanner .text-info {
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  .heroBanner .text-info h1 {
+    font-size: 1.8rem;
+  }
+
+  .heroBanner .text-info p {
+    font-size: 1rem;
+  }
+  .section-heading {
+    font-size: 1rem;
+  }
+}
+
+/* News Cards: make them full width */
+@media (max-width: 768px) {
+  .card-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    width: 90%;
+  }
+
+  .card {
+    width: 100% !important;
+    max-width: 95%;
+    padding: 1.2rem;
+  }
+
+  .card__title {
+    font-size: 1.2rem;
+  }
+
+  .card__excerpt {
+    font-size: 0.95rem;
+  }
+}
+
+/* Footer: stack sections vertically */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .lang-switch-dropdown {
+    position: relative;
+  }
+
+  /* Make sure dropdown appears fully visible below the button */
+  .lang-list {
+    right: auto;
+    left: 0;
+    top: calc(100% + 8px);
+    min-width: 140px;
+    transform: none; /* cancel the desktop translateY offset */
+    max-height: 240px;
+    overflow-y: auto;
+    z-index: 10000;
+  }
+
+  /* Slight shadow for visibility */
+  .lang-list.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  /* Prevent it from being cut off by other positioned parents */
+  header,
+  .header-branding,
+  .header-controls {
+    overflow: visible !important;
+  }
+
+  /* Reduce padding a bit for small screens */
+  .lang-list li {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+.brand-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brand-left .logo {
+  height: 32px;
+  width: auto;
+}
+
+.brand-left .site-title {
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* Brand always centered on mobile */
+@media (max-width: 768px) {
+  /* Center brand-left */
+  .brand-left {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .brand-left .logo {
+    height: 28px;
+  }
+
+  .brand-left .site-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  /* Lang button to the left */
+  .header-controls {
+    position: absolute;
+    left: 10px;
+  }
+}
+
+/* ======================================================= */
+/* === FINAL FIX: Prevent Horizontal Scrolling Anywhere === */
+/* ======================================================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  html,
+  body {
+    max-width: 100vw !important;
+    overflow-x: hidden !important; /* change from hidden to visible */
+  }
+  #splash img {
+    width: 70%;
+    height: auto;
+  }
+  .heroBanner {
+    height: 100vh;
+    padding: 2rem 1rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: visible; /* instead of hidden */
+  }
+
+  .heroBanner .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1.5rem;
+    box-sizing: border-box;
+  }
+
+  .card-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 95%;
+  }
+
+  .footer-container {
+    width: 100%;
+    padding: 0 1rem;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  /* Language dropdown fix */
+  .lang-switch-dropdown {
+    position: relative;
+    overflow: visible !important;
+  }
+
+  .lang-list {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 10%;
+    transform: translateX(-50%);
+    min-width: 160px;
+    max-width: calc(100vw - 32px);
+    background: var(--darkbg);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    max-height: 240px;
+    z-index: 99999;
+  }
+
+  .lang-list.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  body.rtl .lang-list {
+    left: 200%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+}

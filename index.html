@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>اخبار اقاريو العربية</title>
+    <link rel="icon" type="image/png" href=" favicon.ico" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body class="no-scroll">
+    <!-- Splash Screen -->
+    <div id="splash">
+      <img src="logo.png" alt="Website Logo" />
+    </div>
+
+    <header>
+      <div class="header-branding">
+        <div class="brand-left">
+          <img src="favicon.ico" alt="3rb.io Logo" class="logo" />
+          <span class="site-title" data-i18n="site_title">3rb.io News</span>
+        </div>
+
+        <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+        <nav class="mobile-nav">
+          <a href="https://3rb.io" target="_blank" data-i18n="visit_game">
+            Visit Game
+          </a>
+          <a href="https://docs.3rb.io/" target="_blank" data-i18n="docs">
+            Docs
+          </a>
+          <a href="news/news.html" target="_self" data-i18n="game_news"></a>
+          <a href="fixes/fixes.html" target="_self" data-i18n="game_fixes"></a>
+        </nav>
+      </div>
+
+      <div class="header-controls">
+        <div id="custom-lang-switch" class="lang-switch-dropdown">
+          <button
+            class="current-lang-display"
+            aria-expanded="false"
+            aria-controls="lang-list"
+          >
+            <span id="current-lang-flag" data-lang="ar">🌐</span>
+          </button>
+
+          <ul id="lang-list" class="lang-list" role="listbox">
+            <li role="option" data-lang="ar" data-flag="🇸🇦" data-name="العربية">
+              🇸🇦 العربية
+            </li>
+
+            <li role="option" data-lang="en" data-flag="🇬🇧" data-name="English">
+              🇬🇧 English
+            </li>
+
+            <li role="option" data-lang="es" data-flag="🇪🇸" data-name="Español">
+              🇪🇸 Español
+            </li>
+            <li
+              role="option"
+              data-lang="fr"
+              data-flag="🇫🇷"
+              data-name="Français"
+            >
+              🇫🇷 Français
+            </li>
+
+            <li role="option" data-lang="ru" data-flag="🇷🇺" data-name="Русский">
+              🇷🇺 Русский
+            </li>
+
+            <li role="option" data-lang="tr" data-flag="🇹🇷" data-name="Türkçe">
+              🇹🇷 Türkçe
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+     
+
+    <main id="main-content">
+      <section class="heroBanner">
+        <div class="container">
+          <div class="hero-image">
+            <img src="logo.png" alt="3rb.io News Logo" />
+          </div>
+
+          <!-- Text Column -->
+          <div class="text-info">
+            <h1 data-i18n="hero_title">
+              مرحبًا بك في اخر اخبار اقاريو العربية
+            </h1>
+            <p>
+              <span class="highlight" data-i18n="hero_follow"></span>
+              <span data-i18n="hero_text"></span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="news">
+        <h2 class="section-heading" data-i18n="news_section_title"></h2>
+
+        <div class="card-grid">
+          <article class="card card--news">
+            <div class="card__meta">
+              <span class="card__icon" aria-hidden="true">📣</span>
+
+              <span class="card__category card__category--news">NEWS</span>
+              <time class="card__date" datetime="2025-11-15">Oct 30, 2025</time>
+            </div>
+            <h3 class="card__title news_title" data-i18n="news1_title">
+              New Global Tournament Announced
+            </h3>
+            <p class="card__excerpt" data-i18n="news1_text">
+              We are launching the 2025 global 3rb.io tournament. Register soon
+              and compete for top rewards!
+            </p>
+
+            <a
+              href="news/news.html"
+              class="card__link"
+              data-i18n="read_more"
+            ></a>
+          </article>
+
+          <article class="card card--update">
+            <div class="card__meta">
+              <span class="card__icon" aria-hidden="true">✨</span>
+
+              <span class="card__category card__category--update">UPDATE</span>
+              <time class="card__date" datetime="2025-11-01">Sep 26, 2025</time>
+            </div>
+            <h3 class="card__title updates_title" data-i18n="news2_title">
+              Version 2.0 Released - Night Mode!
+            </h3>
+            <p class="card__excerpt" data-i18n="news2_text">
+              Major update adds new maps, better matchmaking, and the
+              long-awaited night mode.
+            </p>
+            <a
+              href="/v2-patch-notes"
+              href="updates/updates.html"
+              class="card__link"
+              data-i18n="view_full_notes"
+            ></a>
+          </article>
+
+          <article class="card card--fixes">
+            <div class="card__meta">
+              <span class="card__icon" aria-hidden="true">🛠️</span>
+
+              <span class="card__category card__category--fix">FIXES</span>
+              <time class="card__date" datetime="2025-10-28">Sep 05, 2025</time>
+              <span class="card_enOnly">ENGLISH ONLY</span>
+            </div>
+            <h3 class="card__title fixes_title" data-i18n="fix1_title">
+              Servers & Protection Update #0.1.0
+            </h3>
+            <ul class="card__fix-list">
+              <li>Fixed WS fake connections and random attacks.</li>
+            </ul>
+            <a
+              href="fixes/fixes.html"
+              class="card_link_fixes card__link--details"
+              >Patch Details »</a
+            >
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!--     <footer>
+      <p data-i18n="footer_text">© 2025 3rb.io — All rights reserved</p>
+    </footer> -->
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <img src="logo.png" alt="3rb.io Logo" class="footer-logo" />
+          <p class="footer-desc" data-i18n="footer_desc"></p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="https://3rb.io/" target="_blank">Play Game</a></li>
+            <li>
+              <a href="https://docs.3rb.io/" target="_blank">Documentation</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <ul>
+            <li>
+              <a href="https://discord.gg/3rbio" target="_blank">Discord</a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/3rbio1" target="_blank"
+                >YouTube</a
+              >
+            </li>
+            <li>
+              <a href="https://www.instagram.com/3rbofficial" target="_blank"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a href="https://www.tiktok.com/@3rbioofficial" target="_blank"
+                >TikTok</a
+              >
+            </li>
+            <li><a href="https://x.com/3rbofficial" target="_blank">X</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footer_text"></p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

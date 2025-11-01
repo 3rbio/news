@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3rb.io News Page</title>
+    <link rel="icon" href="../favicon.ico" type="image/png" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/updates.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="header-container"></div>
+    <header>
+      <div class="header-branding">
+        <div class="brand-left">
+          <a href="../index.html">
+            <img src="../favicon.ico" alt="3rb.io Logo" class="logo" />
+            <span class="site-title" data-i18n="site_title">3rb.io News</span>
+          </a>
+        </div>
+
+        <!-- Hamburger icon for mobile -->
+        <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+        <!-- Dropdown navigation -->
+        <nav class="mobile-nav">
+          <a href="https://3rb.io" target="_blank" data-i18n="visit_game"
+            >Visit Game</a
+          >
+          <a href="https://docs.3rb.io/" target="_blank" data-i18n="docs"
+            >Docs</a
+          >
+          <a href="../fixes/fixes.html" target="_self" data-i18n="game_fixes">
+          </a>
+        </nav>
+      </div>
+
+      <div class="header-controls">
+        <div id="custom-lang-switch" class="lang-switch-dropdown">
+          <button
+            class="current-lang-display"
+            aria-expanded="false"
+            aria-controls="lang-list"
+          >
+            <span id="current-lang-flag" data-lang="ar">🌐</span>
+          </button>
+
+          <ul id="lang-list" class="lang-list" role="listbox">
+            <li role="option" data-lang="ar" data-flag="🇸🇦" data-name="العربية">
+              🇸🇦 العربية
+            </li>
+
+            <li role="option" data-lang="en" data-flag="🇬🇧" data-name="English">
+              🇬🇧 English
+            </li>
+
+            <li role="option" data-lang="es" data-flag="🇪🇸" data-name="Español">
+              🇪🇸 Español
+            </li>
+
+            <li
+              role="option"
+              data-lang="fr"
+              data-flag="🇫🇷"
+              data-name="Français"
+            >
+              🇫🇷 Français
+            </li>
+
+            <li role="option" data-lang="tr" data-flag="🇹🇷" data-name="Türkçe">
+              🇹🇷 Türkçe
+            </li>
+
+            <li role="option" data-lang="ru" data-flag="🇷🇺" data-name="Русский">
+              🇷🇺 Русский
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main id="news-container">
+      <h1 class="page-title" data-i18n="updatesPage_Title">
+        Latest Game Updates
+      </h1>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <img src="../logo.png" alt="3rb.io Logo" class="footer-logo" />
+          <p class="footer-desc" data-i18n="footer_desc"></p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="https://3rb.io/" target="_blank">Play Game</a></li>
+            <li>
+              <a href="https://docs.3rb.io/" target="_blank">Documentation</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <ul>
+            <li>
+              <a href="https://discord.gg/3rbio" target="_blank">Discord</a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/3rbio1" target="_blank"
+                >YouTube</a
+              >
+            </li>
+            <li>
+              <a href="https://www.instagram.com/3rbofficial" target="_blank"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a href="https://www.tiktok.com/@3rbioofficial" target="_blank"
+                >TikTok</a
+              >
+            </li>
+            <li><a href="https://x.com/3rbofficial" target="_blank">X</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footer_text"></p>
+      </div>
+    </footer>
+    <div id="footer-container"></div>
+    <script src="../script.js"></script>
+  </body>
+</html>

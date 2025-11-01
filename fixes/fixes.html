@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3rb.io News Page</title>
+    <link rel="icon" href="../favicon.ico" type="image/png" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/fixes.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="header-container"></div>
+    <header>
+      <div class="header-branding">
+        <div class="brand-left">
+          <a href="../index.html"  > 
+            <img src="../favicon.ico" alt="3rb.io Logo" class="logo" />
+          <span class="site-title" data-i18n="site_title">3rb.io News</span>
+        </a> 
+        </div>
+
+        <!-- Hamburger icon for mobile -->
+        <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+        <!-- Dropdown navigation -->
+        <nav class="mobile-nav">
+          <a href="https://3rb.io" target="_blank" data-i18n="visit_game"
+            >Visit Game</a
+          >
+          <a href="https://docs.3rb.io/" target="_blank" data-i18n="docs"
+            >Docs</a
+          >
+          <a href="../news/news.html" target="_self" data-i18n="game_news"></a>
+        </nav>
+      </div>
+
+      <div class="header-controls">
+        <div id="custom-lang-switch" class="lang-switch-dropdown">
+          <button
+            class="current-lang-display"
+            aria-expanded="false"
+            aria-controls="lang-list"
+          >
+            <span id="current-lang-flag" data-lang="en">🌐</span>
+          </button>
+
+          <ul id="lang-list" class="lang-list" role="listbox">
+            <li role="option" data-lang="ar" data-flag="🇸🇦" data-name="العربية">
+              🇸🇦 العربية
+            </li>
+
+            <li role="option" data-lang="en" data-flag="🇬🇧" data-name="English">
+              🇬🇧 English
+            </li>
+
+            <li role="option" data-lang="es" data-flag="🇪🇸" data-name="Español">
+              🇪🇸 Español
+            </li>
+
+            <li
+              role="option"
+              data-lang="fr"
+              data-flag="🇫🇷"
+              data-name="Français"
+            >
+              🇫🇷 Français
+            </li>
+
+            <li role="option" data-lang="tr" data-flag="🇹🇷" data-name="Türkçe">
+              🇹🇷 Türkçe
+            </li>
+
+            <li role="option" data-lang="ru" data-flag="🇷🇺" data-name="Русский">
+              🇷🇺 Русский
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main id="news-container">
+      <h1 class="page-title">Latest Game Fixes</h1>
+      <article
+        class="news-card"
+        data-expanded="false"
+        role="region"
+        aria-label="News Event: Spooky Season Event: The Midnight Haunt!"
+      >
+        <div class="card-header" tabindex="0" aria-controls="details-2">
+          <div class="header-content">
+            <h2 class="fixes-title">
+              Add-ons & Plugins Disabled – Game Version BETA #0.1.0
+            </h2>
+            <p class="fix-date">
+              <time datetime="2025-26-09">September 20, 2025</time>
+              <span class="fix-tag fix-tag">Server Fix</span>
+            </p>
+          </div>
+          <button
+            class="expand-btn"
+            aria-expanded="false"
+            aria-controls="details-2"
+            aria-label="Expand news details"
+          >
+            <i class="fas fa-chevron-down icon"></i>
+          </button>
+        </div>
+
+        <div class="news-details" id="details-2" aria-hidden="true">
+  
+          <div class="fixes-full-content">
+        
+            </h3>
+            <div class="patch-notes">
+              <h3>Patch Notes</h3>
+              <ul>
+                <li>
+                  Add-ons and plugins have been disabled to ensure fair gameplay
+                  for all players.
+                </li>
+                <li>
+                  All previous exploits or enhancements via third-party tools
+                  are now blocked.
+                </li>
+                <li>
+                  This update improves game stability and maintains a level
+                  playing field.
+                </li>
+                <li>
+                  Players can now enjoy the game without interference from
+                  external add-ons or plugins.
+                </li>
+              </ul>
+            </div> 
+          </div>
+        </div>
+      </article>
+      <article
+        class="news-card"
+        data-expanded="false"
+        role="region"
+        aria-label="News Event: Spooky Season Event: The Midnight Haunt!"
+      >
+        <div class="card-header" tabindex="0" aria-controls="details-2">
+          <div class="header-content">
+            <h2 class="fixes-title">Servers & Protection Update #0.1.0</h2>
+            <p class="fix-date">
+              <time datetime="2025-09-05">September 05, 2025</time>
+              <span class="fix-tag bug-tag">Bug Fix</span>
+            </p>
+          </div>
+          <button
+            class="expand-btn"
+            aria-expanded="false"
+            aria-controls="details-2"
+            aria-label="Expand news details"
+          >
+            <i class="fas fa-chevron-down icon"></i>
+          </button>
+        </div>
+
+        <div class="news-details" id="details-2" aria-hidden="true">
+          <div class="fixes-full-content">
+            <div class="patch-notes">
+              <h3>Fixes & Security Updates</h3>
+              <ul>
+                <li>Fixed WebSocket fake connections and random attacks.</li>
+                <li>
+                  Resolved issues with fake connections and irregular attacks.
+                </li>
+                <li>
+                  Patched a vulnerability allowing fake connections and random
+                  disruptions.
+                </li>
+                <li>
+                  Fixed an exploit where bots could join with invalid
+                  connections.
+                </li>
+                <li>
+                  Improved server security by preventing fake connections and
+                  random attacks.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <img src="../logo.png" alt="3rb.io Logo" class="footer-logo" />
+          <p class="footer-desc" data-i18n="footer_desc"></p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="https://3rb.io/" target="_blank">Play Game</a></li>
+            <li>
+              <a href="https://docs.3rb.io/" target="_blank">Documentation</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <ul>
+            <li>
+              <a href="https://discord.gg/3rbio" target="_blank">Discord</a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/3rbio1" target="_blank"
+                >YouTube</a
+              >
+            </li>
+            <li>
+              <a href="https://www.instagram.com/3rbofficial" target="_blank"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a href="https://www.tiktok.com/@3rbioofficial" target="_blank"
+                >TikTok</a
+              >
+            </li>
+            <li><a href="https://x.com/3rbofficial" target="_blank">X</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footer_text"></p>
+      </div>
+    </footer>
+    <div id="footer-container"></div>
+    <script src="../script.js"></script>
+  </body>
+</html>
