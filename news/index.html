@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>3rb.io News Page</title>
-    <link rel="icon" href="favicon.ico" type="image/png" />
-    <!-- Use relative paths -->
+    <link rel="icon" href="/favicon.ico" type="image/png" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/news.css" />
     <link
@@ -26,25 +25,16 @@
         <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
 
         <nav class="mobile-nav">
-          <a href="https://3rb.io" target="_blank" data-i18n="visit_game">
-            Visit Game
-          </a>
-          <a href="https://docs.3rb.io/" target="_blank" data-i18n="docs">
-            Docs
-          </a> 
-          <a href="/updates" target="_self" data-i18n="game_updates">Updates</a>
-          <a href="/fixes" target="_self" data-i18n="game_fixes">Fixes</a>
+          <a href="https://3rb.io" target="_blank" data-i18n="visit_game">Visit Game</a>
+          <a href="https://docs.3rb.io/" target="_blank" data-i18n="docs">Docs</a> 
+          <a href="/updates/" target="_self" data-i18n="game_updates">Updates</a>
+          <a href="/fixes/" target="_self" data-i18n="game_fixes">Fixes</a>
         </nav>
       </div>
-
-      <!-- language switcher stays the same -->
+ 
       <div class="header-controls">
         <div id="custom-lang-switch" class="lang-switch-dropdown">
-          <button
-            class="current-lang-display"
-            aria-expanded="false"
-            aria-controls="lang-list"
-          >
+          <button class="current-lang-display"aria-expanded="false"aria-controls="lang-list">
             <span id="current-lang-flag" data-lang="ar">🌐</span>
           </button>
           <ul id="lang-list" class="lang-list" role="listbox">
@@ -74,18 +64,9 @@
     <main id="news-container">
       <h1 class="page-title" data-i18n="newsPage_Title">Latest Game News</h1>
       
-      <article
-        class="news-card"
-        data-expanded="false"
-        role="region"
-        aria-label="News Update: Patch 2.1: The Desert Scourge"
-      >
+      <article class="news-card" data-expanded="false" role="region" aria-label="News Update: Patch 2.1: The Desert Scourge">
         <div class="card-header" tabindex="0" aria-controls="details-1">
-          <img
-            src="/assets/images/news/levels.png"
-            alt="New Desert Region Preview"
-            class="news-image-preview"
-          />
+          <img src="/assets/images/news/levels.png" alt="New Desert Region Preview" class="news-image-preview"/>
           <div class="header-content">
             <h2 class="news-title" data-i18n="levels_update_title"></h2>
             <p class="news-date">
@@ -93,12 +74,7 @@
               <span class="news-tag update-tag">Major Update</span>
             </p>
           </div>
-          <button
-            class="expand-btn"
-            aria-expanded="false"
-            aria-controls="details-2"
-            aria-label="Expand news details"
-          >
+          <button class="expand-btn" aria-expanded="false" aria-controls="details-2" aria-label="Expand news details">
             <i class="fas fa-chevron-down icon"></i>
           </button>
         </div>
