@@ -10,12 +10,12 @@ window.translations["en"] = {
   hero_title: "Welcome to the latest 3rb.io news",
   hero_follow: "Follow here",
   hero_text: "all the latest news, updates, fixes, and exclusives in 3rb.io!",
-  news1_title: "New Tournament Announced",
+  news1_title: "The Long-Awaited Game Update",
   news1_text:
-    "We’re launching the 2025 global 3rb.io tournament. Register soon and compete for top rewards!",
-  news2_title: "Version 2.0 Released",
+    "Stay tuned for the official update of the long-awaited 3rb.io game",
+  news2_title: "Version 0.1.0 Release",
   news2_text:
-    "Major update adds new maps, better matchmaking, and the long-awaited night mode.",
+    "A section dedicated to the latest live game updates—stay tuned for all announcements",
   news3_title: "Community Spotlight",
   news3_text:
     "Check out this month’s featured creators and their amazing fan-made levels.",
@@ -29,11 +29,11 @@ window.translations["en"] = {
   news_section_title: "Latest News, Updates & Fixes",
   /* News Page */
   newsPage_Title: "Latest Game News",
-  vip_news_title: "The VIP Membership is Coming Soon to Agario Arabia!",
+  vip_news_title: "The VIP Membership is Coming Soon to 3rb.io Arabia!",
   vip_news_preview:
     "👇 Gain access to exclusive features and special content available only for VIP members — stay tuned for full details.",
   vip_full_content:
-    "At last, the VIP Membership is coming to Agario Arabia! A whole new experience awaits — enjoy unique perks and exclusive content available only to premium members.",
+    "At last, the VIP Membership is coming to 3rb.io Arabia! A whole new experience awaits — enjoy unique perks and exclusive content available only to premium members.",
   vip_feature_title: "VIP Features",
   vip_feature_one:
     "Exclusive skins (6 special skins that can’t be obtained any other way).",
@@ -46,7 +46,7 @@ window.translations["en"] = {
   vip_feature_x:
     "… Stay tuned for the full reveal of more exclusive benefits — this is just the beginning!",
   vip_feature_xi:
-    "🏆 VIP Membership in Agario Arabia — because true distinction has its own style.",
+    "🏆 VIP Membership in 3rb.io Arabia — because true distinction has its own style.",
   /* News Page - Levels */
   levels_update_title:
     "Mysterious Leak: A New Level System… and Exclusive Skins!",

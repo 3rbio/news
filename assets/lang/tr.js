@@ -1,7 +1,7 @@
 // lang/ar.js
 window.translations = window.translations || {};
 window.translations["tr"] = {
-  site_title: "Agar.io Arapça",
+  site_title: "3rb.io Arapça",
   visit_game: "Oyunu Ziyaret Et",
   game_news: "Oyun Haberleri",
   game_fixes: "Düzeltmeler",
@@ -11,30 +11,31 @@ window.translations["tr"] = {
   hero_follow: "Buradan takip et",
   hero_text:
     "3rb.io’daki en son haberler, güncellemeler, düzeltmeler ve özel içeriklerin tümü!",
-  news1_title: "Yeni Turnuva Duyuruldu",
+  news1_title: "Uzun Süredir Beklenen Oyun Güncellemesi",
   news1_text:
-    "2025 küresel 3rb.io turnuvası başlıyor. Kayıt ol ve büyük ödüller için yarış!",
-  news2_title: "Sürüm 2.0 Yayınlandı",
+    "Yıllardır beklenen 3rb.io oyununun resmi güncellemesini kaçırmayın",
+  news2_title: "Sürüm 0.1.0 Yayınlandı",
   news2_text:
-    "Yeni haritalar, daha iyi eşleştirme ve beklenen gece modu eklendi.",
+    "Oyunun en son canlı güncellemeleri için ayrılmış bir bölüm—tüm duyuruları takip edin",
   news3_title: "Topluluk Öne Çıkanlar",
   news3_text:
     "Bu ayın öne çıkan yaratıcılarını ve hayran yapımı haritalarını keşfet.",
   footer_text: "© 2025 3rb.io — Tüm hakları saklıdır",
   footer_desc:
     "3rb.io’daki en son haberler, güncellemeler ve topluluk etkinliklerinden haberdar olun!",
-
+  footer_social: "Bizi takip edin",
+  footer_links: "Sitemiz",
   news_section_title: "Son Haberler, Güncellemeler ve Düzeltmeler",
   read_more: "Devamını Oku »",
   view_full_notes: "Tüm Notları Gör »",
   patch_details: "Yama Detayları »",
   /* News Page */
   newsPage_Title: "Oyunun Son Haberleri",
-  vip_news_title: "VIP Üyelik ilk kez Agario Arabia’da geliyor!",
+  vip_news_title: "VIP Üyelik ilk kez 3rb.io Arabia’da geliyor!",
   vip_news_preview:
     "👇 Sadece VIP üyeler için özel özellikler ve içeriklere erişim kazanın — tüm detaylar için bizi takip edin.",
   vip_full_content:
-    "Sonunda! Agario Arabia’da VIP Üyelik geliyor. Yepyeni bir deneyim seni bekliyor — sadece premium üyelerin erişebileceği benzersiz avantajlar ve özel içerikler seni bekliyor.",
+    "Sonunda! 3rb.io Arabia’da VIP Üyelik geliyor. Yepyeni bir deneyim seni bekliyor — sadece premium üyelerin erişebileceği benzersiz avantajlar ve özel içerikler seni bekliyor.",
   vip_feature_title: "VIP Özellikleri",
   vip_feature_one:
     "Özel görünümler (Başka hiçbir şekilde elde edilemeyen 6 özel skin).",
@@ -46,7 +47,7 @@ window.translations["tr"] = {
   vip_feature_x:
     "… Daha fazla özel avantajın tam duyurusu yakında — bu sadece başlangıç!",
   vip_feature_xi:
-    "🏆 Agario Arabia’da VIP Üyelik — çünkü gerçek ayrıcalık kendini belli eder.",
+    "🏆 3rb.io Arabia’da VIP Üyelik — çünkü gerçek ayrıcalık kendini belli eder.",
   /* News Page - Levels */
   levels_update_title:
     "Gizemli Sızıntı: Yeni Seviye Sistemi... ve Özel Skinler!",

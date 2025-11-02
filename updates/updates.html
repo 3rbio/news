@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>3rb.io News Page</title>
     <link rel="icon" href="favicon.ico" type="image/png" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/updates.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/updates.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -16,26 +16,20 @@
     <div id="header-container"></div>
     <header>
       <div class="header-branding">
-        <div class="brand-left">
-          <a href="index.html">
-            <img src="favicon.ico" alt="3rb.io Logo" class="logo" />
+     <div class="brand-left">
+          <a href="../">
+            <img src="/assets/images/favicon.png" alt="News 3rb.io Logo" class="logo" />
             <span class="site-title" data-i18n="site_title">3rb.io News</span>
           </a>
         </div>
-
-        <!-- Hamburger icon for mobile -->
         <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
-
-        <!-- Dropdown navigation -->
         <nav class="mobile-nav">
           <a href="https://3rb.io" target="_blank" data-i18n="visit_game"
-            >Visit Game</a
-          >
+            >Visit Game</a>
           <a href="https://docs.3rb.io/" target="_blank" data-i18n="docs"
-            >Docs</a
-          >
-       <a href="news.html" target="_self" data-i18n="game_news"></a> 
-          <a href="fixes.html" target="_self" data-i18n="game_fixes"></a>
+            >Docs</a>
+       <a href="/news" target="_self" data-i18n="game_news"></a> 
+          <a href="/fixes" target="_self" data-i18n="game_fixes"></a>
           </a>
         </nav>
       </div>
@@ -98,17 +92,20 @@
         </div>
 
         <div class="footer-links">
-          <h4>Quick Links</h4>
+          <h4 data-i18n="footer_links">Quick Links</h4>
           <ul>
-            <li><a href="https://3rb.io/" target="_blank">Play Game</a></li>
             <li>
-              <a href="https://docs.3rb.io/" target="_blank">Documentation</a>
+              <a href="https://3rb.io/" target="_blank" data-i18n="visit_game"></a>
+              </a>
+            </li>
+            <li>
+              <a href="https://docs.3rb.io/" target="_blank" data-i18n="docs"></a>
             </li>
           </ul>
         </div>
 
         <div class="footer-social">
-          <h4>Follow Us</h4>
+          <h4 data-i18n="footer_social">Follow Us</h4>
           <ul>
             <li>
               <a href="https://discord.gg/3rbio" target="_blank">Discord</a>
@@ -138,6 +135,6 @@
       </div>
     </footer>
     <div id="footer-container"></div>
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
   </body>
 </html>

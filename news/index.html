@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>3rb.io News Page</title>
-    <link rel="icon" href="../favicon.ico" type="image/png" />
+    <link rel="icon" href="favicon.ico" type="image/png" />
     <!-- Use relative paths -->
-    <link rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="stylesheet" href="../assets/css/news.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/news.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -17,10 +17,12 @@
     <header>
       <div class="header-branding">
         <div class="brand-left">
-          <img src="../favicon.ico" alt="3rb.io Logo" class="logo" />
-          <span class="site-title" data-i18n="site_title">3rb.io News</span>
+          <a href="../">
+            <img src="/assets/images/favicon.png" alt="News 3rb.io Logo" class="logo" />
+            <span class="site-title" data-i18n="site_title">3rb.io News</span>
+          </a>
         </div>
-
+        
         <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
 
         <nav class="mobile-nav">
@@ -30,8 +32,8 @@
           <a href="https://docs.3rb.io/" target="_blank" data-i18n="docs">
             Docs
           </a> 
-          <a href="./updates.html" target="_self" data-i18n="game_updates">Updates</a>
-          <a href="./fixes.html" target="_self" data-i18n="game_fixes">Fixes</a>
+          <a href="/updates" target="_self" data-i18n="game_updates">Updates</a>
+          <a href="/fixes" target="_self" data-i18n="game_fixes">Fixes</a>
         </nav>
       </div>
 
@@ -80,7 +82,7 @@
       >
         <div class="card-header" tabindex="0" aria-controls="details-1">
           <img
-            src="../assets/images/news/levels.png"
+            src="/assets/images/news/levels.png"
             alt="New Desert Region Preview"
             class="news-image-preview"
           />
@@ -122,7 +124,7 @@
               <li data-i18n="leves_feature_six"></li>
             </ul>
             <img
-              src="../assets/images/news/levels.png"
+              src="/assets/images/news/levels.png"
               alt="Detailed image of the new Sand Drake boss"
               class="news-image-full"
             />
@@ -140,7 +142,7 @@
       >
         <div class="card-header" tabindex="0" aria-controls="details-2">
           <img
-            src="../assets/images/news/vipSkins.png"
+            src="/assets/images/news/vipSkins.png"
             alt="Halloween Event Promotion Image"
             class="news-image-preview"
           />
@@ -177,7 +179,7 @@
             </ul>
 
             <img
-              src="../assets/images/news/vipSkins.png"
+              src="/assets/images/news/vipSkins.png"
               alt="Detailed image of event cosmetics"
               class="news-image-full"
             />
@@ -194,7 +196,7 @@
       >
         <div class="card-header" tabindex="0" aria-controls="details-1">
           <img
-            src="../assets/images/news/friendsList.png"
+            src="/assets/images/news/friendsList.png"
             alt="New Desert Region Preview"
             class="news-image-preview"
           />
@@ -233,7 +235,7 @@
             </ul>
             <p data-i18n="friends_feature_x"></p>
             <img
-              src="../assets/images/news/friendsList.png"
+              src="/assets/images/news/friendsList.png"
               alt="Detailed image of the new Sand Drake boss"
               class="news-image-full"
             />
@@ -247,22 +249,25 @@
     <footer class="site-footer">
       <div class="footer-container">
         <div class="footer-brand">
-          <img src="../logo.png" alt="3rb.io Logo" class="footer-logo" />
+          <img src="/logo.png" alt="3rb.io Logo" class="footer-logo" />
           <p class="footer-desc" data-i18n="footer_desc"></p>
         </div>
 
         <div class="footer-links">
-          <h4>Quick Links</h4>
+          <h4 data-i18n="footer_links">Quick Links</h4>
           <ul>
-            <li><a href="https://3rb.io/" target="_blank">Play Game</a></li>
             <li>
-              <a href="https://docs.3rb.io/" target="_blank">Documentation</a>
+              <a href="https://3rb.io/" target="_blank" data-i18n="visit_game"></a>
+              </a>
+            </li>
+            <li>
+              <a href="https://docs.3rb.io/" target="_blank" data-i18n="docs"></a>
             </li>
           </ul>
         </div>
 
         <div class="footer-social">
-          <h4>Follow Us</h4>
+          <h4 data-i18n="footer_social">Follow Us</h4>
           <ul>
             <li>
               <a href="https://discord.gg/3rbio" target="_blank">Discord</a>
@@ -292,6 +297,6 @@
       </div>
     </footer>
     <div id="footer-container"></div>
-    <script src="../script.js"></script>
+    <script src="/script.js"></script>
   </body>
 </html>

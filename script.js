@@ -19,7 +19,7 @@ async function loadLanguage(lang) {
     }
 
     const script = document.createElement("script");
-    script.src = `assets/lang/${lang}.js`;
+    script.src = `/assets/lang/${lang}.js`;
     script.dataset.langScript = lang;
     script.onload = () => resolve();
     script.onerror = () => reject(`Could not load language file: ${lang}`);
@@ -215,6 +215,3 @@ function loadHTML(selector, file) {
     })
     .catch((err) => console.error(`Failed to load ${file}: ${err}`));
 }
-
-loadHTML("#header-container", "header.html");
-loadHTML("#footer-container", "footer.html");

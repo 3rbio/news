@@ -1,0 +1,59 @@
+/* 3rb.io News Demo Style */
+:root {
+  --darkbg: #0d0e16;
+  --text-color: #f2f2f2;
+  --card-bg: #1c1c1e;
+  --highlight-color: #ffcc00;
+  --primary-color: #ff0066;
+  --hoverColor: #1e9ce3;
+  --line: #363a47;
+  --secondary-btn-bg: #282a37; /* New variable for secondary button */
+  --darktext: #99aab5;
+}
+
+/* Reset some default styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Arial", sans-serif;
+  background-color: var(--darkbg);
+  color: #333;
+}
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+.error-container h1 {
+  font-size: 9rem;
+  margin: 0;
+  color: var(--hoverColor);
+}
+
+.error-container p {
+  font-size: 1.5rem;
+  margin: 10px 0 20px;
+  color: var(--darktext);
+}
+
+.btn-home {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn-home:hover {
+  background-color: #2980b9;
+}

@@ -1,7 +1,7 @@
 // lang/ar.js
 window.translations = window.translations || {};
 window.translations["es"] = {
-  site_title: "Agario Árabe",
+  site_title: "3rb.io Árabe",
   visit_game: "Visitar Juego",
   game_news: "Noticias del juego",
   game_fixes: "Correcciones",
@@ -11,30 +11,31 @@ window.translations["es"] = {
   hero_follow: "Sigue aquí",
   hero_text:
     "todas las noticias, actualizaciones, correcciones y contenidos exclusivos de 3rb.io!",
-  news1_title: "Nuevo Torneo Anunciado",
+  news1_title: "Actualización del juego tan esperada",
   news1_text:
-    "Estamos lanzando el torneo global 3rb.io 2025. ¡Regístrate pronto y compite por grandes recompensas!",
-  news2_title: "Versión 2.0 Lanzada",
+    "Espéranos en la actualización oficial del juego 3rb.io esperado durante años",
+  news2_title: "Lanzamiento de la versión 0.1.0",
   news2_text:
-    "Gran actualización con nuevos mapas, mejor emparejamiento y el tan esperado modo nocturno.",
+    "Una sección dedicada a las últimas actualizaciones en vivo del juego—esperen todos los anuncios",
   news3_title: "Destacado de la Comunidad",
   news3_text:
     "Descubre los creadores destacados de este mes y sus increíbles niveles hechos por fans.",
   footer_text: "© 2025 3rb.io — Todos los derechos reservados",
   footer_desc:
     "Mantente al día con las últimas noticias, actualizaciones y eventos de la comunidad en 3rb.io!",
-
+  footer_social: "Síguenos en",
+  footer_links: "Nuestros sitios",
   news_section_title: "Últimas Noticias, Actualizaciones y Correcciones",
   read_more: "Leer Más »",
   view_full_notes: "Ver Notas Completas »",
   patch_details: "Detalles del Parche »",
   /* News Page */
   newsPage_Title: "Últimas Noticias del Juego",
-  vip_news_title: "¡La membresía VIP llega por primera vez a Agario Árabe!",
+  vip_news_title: "¡La membresía VIP llega por primera vez a 3rb.io Árabe!",
   vip_news_preview:
     "👇 Obtén acceso a funciones exclusivas y contenido especial disponible solo para miembros VIP — sigue atento para más detalles.",
   vip_full_content:
-    "Finalmente, llega la membresía VIP a Agario Árabe. ¡Una experiencia completamente nueva te espera, con ventajas únicas y contenido exclusivo solo para los miembros premium!",
+    "Finalmente, llega la membresía VIP a 3rb.io Árabe. ¡Una experiencia completamente nueva te espera, con ventajas únicas y contenido exclusivo solo para los miembros premium!",
   vip_feature_title: "Características VIP",
   vip_feature_one:
     "Aspectos exclusivos (6 skins especiales que no se pueden obtener de otra manera).",
@@ -47,7 +48,7 @@ window.translations["es"] = {
   vip_feature_x:
     "… Mantente atento al anuncio completo de más beneficios exclusivos — ¡esto es solo el comienzo!",
   vip_feature_xi:
-    "🏆 Membresía VIP en Agario Árabe — porque la distinción real tiene su propio estilo.",
+    "🏆 Membresía VIP en 3rb.io Árabe — porque la distinción real tiene su propio estilo.",
   /* News Page - Levels */
   levels_update_title:
     "¡Filtración misteriosa: un nuevo sistema de niveles... y skins exclusivas!",

@@ -168,7 +168,6 @@ body.rtl header {
 
 body.rtl .header-branding {
   flex-direction: row-reverse;
-  text-align: right;
 }
 
 body.rtl .logo {
@@ -888,6 +887,9 @@ body.rtl .card__link {
   .header-branding,
   .header-controls {
     overflow: visible !important;
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center; /* vertical */
   }
 
   /* Reduce padding a bit for small screens */
@@ -934,10 +936,8 @@ body.rtl .card__link {
     font-weight: 600;
   }
 
-  /* Lang button to the left */
   .header-controls {
-    position: absolute;
-    left: 10px;
+    position: static; /* remove absolute */
   }
 }
 
