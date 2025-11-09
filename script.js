@@ -19,7 +19,7 @@ async function loadLanguage(lang) {
     }
 
     const script = document.createElement("script");
-    script.src = `/assets/lang/${lang}.js`;
+    script.src = `assets/lang/${lang}.js`;
     script.dataset.langScript = lang;
     script.onload = () => resolve();
     script.onerror = () => reject(`Could not load language file: ${lang}`);

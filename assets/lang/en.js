@@ -53,7 +53,7 @@ window.translations["en"] = {
   levels_preview:
     "Finally, there’s a real goal to play for! Discover the all-new level system coming in the upcoming update!",
 
-  levels_full_des1: "🔥 Finally, the game has a purpose!",
+  levels_full_des1: "Finally, the game has a purpose ! 🔥",
   levels_full_des2:
     "Start from Level 0 and climb all the way to Level 100. Every 5 levels unlocks exclusive skins that no one else can get 😎. The game now has real challenge — show your progress and skill through levels and style! Leaked info suggests a brand-new leveling system in development that could completely change the gameplay experience!",
   levels_full_des3:
@@ -69,9 +69,9 @@ window.translations["en"] = {
   leves_feature_five: "Top 100 leaderboard for players with the highest XP",
   leves_feature_six: "Top 100 leaderboard for richest players (coins)",
   leves_feature_seven: "Additional hidden features yet to be revealed…",
-  leves_end1: "... Get ready",
-  leves_end2: "💪 The Level System is dropping in the next update",
-  leves_end3: "👑 Let’s see who reaches Level",
+  leves_end1: "Get ready ...",
+  leves_end2: "The Level System is dropping in the next update 💪",
+  leves_end3: "Let’s see who reaches Level 100 👑",
   /* News Page Friends */
   friends_update_title: "✅ Friends List Confirmed for the Next Update!",
   friends_update_preview:
@@ -88,9 +88,42 @@ window.translations["en"] = {
   friends_feature_x:
     "It has been leaked that the system is still in a testing phase and may face minor issues, but it’s currently under intensive development to improve performance and user experience.",
   friends_end1:
-    "… Get ready — the next update won’t just be simple improvements,",
+    "Get ready — the next update won’t just be simple improvements,",
   friends_end2:
     "the new Friends System will change how you connect in the game!",
+  /* News Page - 3rb.io Username System */
+  user_title: "The next phase in 3rb.io... is taking shape!",
+  user_preview:
+    "In the world of 3rb.io, being unique is no longer just a playstyle ...",
+  user_des1:
+    "Soon, every player will have a unique identity in the game — your name, your personality, and your own style !!!",
+  user_des2:
+    "A completely new login system has been implemented in an exclusive and unprecedented way to make your login experience more unique and organized than ever before.",
+  user_des4:
+    "You’ll now be able to sign in via Discord or Google — but this time... with a completely different idea!",
+  user_des6: "We no longer rely on pulling usernames from your accounts,",
+  user_des7:
+    "Instead, a custom username will be created for you during your first login — a name that represents your identity in 3rb.io and cannot be changed at all.",
+  user_des9:
+    "This new system comes to end randomness and give every player a unique and personalized identity.",
+  user_features: "Username System Features",
+  user_feature1:
+    "Provides every player with a permanent and unique username that cannot be duplicated.",
+  user_feature2:
+    "Prevents randomness and ensures an organized environment for selecting names.",
+  user_feature3:
+    "Allows you to choose your username during your first login — it will not be pulled from any other account.",
+  user_feature4:
+    "Uses an intelligent verification system that instantly rejects inappropriate or duplicate names.",
+  user_feature5:
+    "Fully complies with the security and moderation policy of 3rb.io to protect the community from offensive names.",
+  user_end1:
+    "Any username that violates the guidelines or contains inappropriate words",
+  user_end2:
+    "will be strictly handled through the automatic review and moderation system.",
+  user_end3: "To view the full username creation guidelines, visit",
+  user_end4: "Username Guidelines",
+
   /* Updates Page */
   updatesPage_Title: "Latest Game Updates",
 };

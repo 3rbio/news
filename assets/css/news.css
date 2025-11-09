@@ -37,6 +37,7 @@
   background-color: var(--card-bg-color);
   border-radius: var(--border-radius);
   margin-bottom: 30px; /* More space between cards */
+  width: 100%;
   overflow: hidden;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
   /* Smoother transition */

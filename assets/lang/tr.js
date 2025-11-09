@@ -93,6 +93,40 @@ window.translations["tr"] = {
     "… Hazır olun — bir sonraki güncelleme sadece küçük iyileştirmeler getirmeyecek,",
   friends_end2:
     "Yeni Arkadaş Sistemi oyundaki iletişim biçimini tamamen değiştirecek!",
+  /* News Page - 3rb.io Username System */
+  user_title: "3rb.io’da yeni dönem... şekillenmeye başladı!",
+  user_preview:
+    "3rb.io dünyasında farklı olmak artık sadece bir oyun stili değil ...",
+  user_des1:
+    "Yakında her oyuncunun oyunda benzersiz bir kimliği olacak — ismin, tarzın ve kişiliğin !!!",
+  user_des2:
+    "Tamamen yeni bir giriş sistemi, deneyimini her zamankinden daha özel ve düzenli hale getirmek için benzersiz bir şekilde geliştirildi.",
+  user_des4:
+    "Artık Discord veya Google üzerinden giriş yapabileceksin — ama bu sefer... tamamen farklı bir fikirle!",
+  user_des6: "Artık kullanıcı adlarını hesaplarından çekmiyoruz,",
+  user_des7:
+    "Bunun yerine, ilk girişinde sana özel bir kullanıcı adı oluşturulacak — 3rb.io’daki kimliğini temsil edecek ve asla değiştirilemeyecek bir isim.",
+  user_des9:
+    "Bu yeni sistem, rastgeleliği sona erdirmek ve her oyuncuya benzersiz bir kimlik kazandırmak için geliştirildi.",
+  user_features: "Kullanıcı Adı Sisteminin Özellikleri",
+  user_feature1:
+    "Her oyuncuya benzersiz ve kalıcı bir kullanıcı adı sağlar; tekrarlanamaz.",
+  user_feature2:
+    "Rastgeleliği engeller ve düzenli bir isim seçimi ortamı sunar.",
+  user_feature3:
+    "İlk girişinde kullanıcı adını kendin seçmene izin verir — başka bir hesaptan alınmaz.",
+  user_feature4:
+    "Uygunsuz veya yinelenen adları anında reddeden akıllı bir doğrulama sistemi kullanır.",
+  user_feature5:
+    "Topluluğu korumak için 3rb.io’nun güvenlik ve denetim politikalarına tamamen uygundur.",
+  user_end1:
+    "Kuralları ihlal eden veya uygunsuz kelimeler içeren herhangi bir kullanıcı adı",
+  user_end2:
+    "otomatik inceleme ve denetim sistemi tarafından sıkı bir şekilde işlenecektir.",
+  user_end3:
+    "Kullanıcı adı oluşturma yönergelerinin tamamını görmek için ziyaret edin",
+  user_end4: "Kullanıcı Adı Kılavuzu",
+
   /* Updates Page */
   updatesPage_Title: "Oyunun Son Güncellemeleri",
 };

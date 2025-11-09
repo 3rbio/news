@@ -98,6 +98,41 @@ window.translations["fr"] = {
     "… Préparez-vous — la prochaine mise à jour ne se limitera pas à de simples améliorations,",
   friends_end2:
     "le nouveau système d’amis va transformer votre façon d’interagir dans le jeu !",
+  /* News Page - 3rb.io Username System */
+  user_title: "La prochaine phase de 3rb.io... prend forme !",
+  user_preview:
+    "... Dans le monde de 3rb.io, se démarquer n’est plus seulement une façon de jouer",
+  user_des1:
+    "!!! Bientôt, chaque joueur aura une identité unique dans le jeu — ton nom, ta personnalité et ton propre style",
+  user_des2:
+    "Un tout nouveau système de connexion a été mis en place de manière exclusive et inédite, pour rendre ton expérience de jeu plus unique et organisée que jamais.",
+  user_des4:
+    "Tu pourras désormais te connecter via Discord ou Google — mais cette fois... avec une idée totalement nouvelle !",
+  user_des6:
+    "Nous ne dépendons plus des noms d’utilisateur tirés de tes comptes,",
+  user_des7:
+    "À la place, un nom d’utilisateur personnalisé sera créé lors de ta première connexion — un nom qui représente ton identité dans 3rb.io et qui ne pourra jamais être modifié.",
+  user_des9:
+    "Ce nouveau système vise à mettre fin au désordre et à donner à chaque joueur une identité unique et personnelle.",
+  user_features: "Fonctionnalités du système de noms d’utilisateur",
+  user_feature1:
+    "Fournit à chaque joueur un nom d’utilisateur permanent et unique qui ne peut être dupliqué.",
+  user_feature2:
+    "Empêche le désordre et garantit un environnement organisé pour le choix des noms.",
+  user_feature3:
+    "Te permet de choisir ton propre nom d’utilisateur lors de ta première connexion — il ne sera pas récupéré d’un autre compte.",
+  user_feature4:
+    "Utilise un système de vérification intelligent qui rejette instantanément les noms inappropriés ou dupliqués.",
+  user_feature5:
+    "Respecte pleinement la politique de sécurité et de modération de 3rb.io pour protéger la communauté des noms offensants.",
+  user_end1:
+    "Tout nom d’utilisateur qui enfreint les directives ou contient des mots inappropriés",
+  user_end2:
+    "sera traité avec rigueur par le système automatique de révision et de modération.",
+  user_end3:
+    "Pour consulter les directives complètes de création de nom d’utilisateur, visitez",
+  user_end4: "Guide des noms d’utilisateur",
+
   /* Updates Page */
   updatesPage_Title: "Dernières mises à jour du jeu",
 };

@@ -94,6 +94,41 @@ window.translations["es"] = {
     "… Prepárate, la próxima actualización no traerá solo mejoras menores,",
   friends_end2:
     "¡el nuevo sistema de amigos cambiará la forma en que te conectas dentro del juego!",
+  /* News Page - 3rb.io Username System */
+  user_title: "¡La próxima fase en 3rb.io... está tomando forma!",
+  user_preview:
+    "... En el mundo de 3rb.io, destacar ya no es solo un estilo de juego",
+  user_des1:
+    "!!! Muy pronto, cada jugador tendrá una identidad única en el juego — tu nombre, tu personalidad y tu propio estilo",
+  user_des2:
+    "Se ha implementado un nuevo sistema de inicio de sesión de manera exclusiva e innovadora, para que tu experiencia sea más única y organizada que nunca.",
+  user_des4:
+    "Ahora podrás iniciar sesión con Discord o Google, ¡pero esta vez... con una idea completamente diferente!",
+  user_des6:
+    "Ya no dependemos de obtener los nombres de usuario de tus cuentas,",
+  user_des7:
+    "En su lugar, se creará un nombre de usuario personalizado durante tu primer inicio de sesión — un nombre que represente tu identidad en 3rb.io y que no podrá ser cambiado.",
+  user_des9:
+    "Este nuevo sistema viene a poner fin al desorden y a dar a cada jugador una identidad única y personalizada.",
+  user_features: "Características del sistema de nombres de usuario",
+  user_feature1:
+    "Proporciona a cada jugador un nombre de usuario permanente y único que no puede duplicarse.",
+  user_feature2:
+    "Evita la aleatoriedad y garantiza un entorno organizado para elegir nombres.",
+  user_feature3:
+    "Te permite elegir tu nombre de usuario en tu primer inicio de sesión — no se tomará de ninguna otra cuenta.",
+  user_feature4:
+    "Utiliza un sistema inteligente de verificación que rechaza al instante los nombres inapropiados o duplicados.",
+  user_feature5:
+    "Cumple completamente con la política de seguridad y moderación de 3rb.io para proteger a la comunidad de nombres ofensivos.",
+  user_end1:
+    "Cualquier nombre de usuario que viole las directrices o contenga palabras inapropiadas",
+  user_end2:
+    "será gestionado estrictamente a través del sistema automático de revisión y moderación.",
+  user_end3:
+    "Para ver las directrices completas de creación de nombres de usuario, visita",
+  user_end4: "Guía de nombres de usuario",
+
   /* Updates Page */
   updatesPage_Title: "Últimas actualizaciones del juego",
 };
