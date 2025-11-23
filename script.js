@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const siteTitle = document.querySelector(".site-title");
   if (siteTitle) {
     siteTitle.addEventListener("click", () => {
-      window.location.href = "index.html";
+      window.location.href = "/";
     });
   }
 });
