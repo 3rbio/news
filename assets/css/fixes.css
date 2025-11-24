@@ -150,13 +150,12 @@
 /* --- Expanded Details Styling --- */
 
 .news-details {
-  /* Initial state: hidden */
   max-height: 0;
   opacity: 0;
   visibility: hidden;
-  /* Smoother transition */
-  transition: max-height 0.5s ease-in-out, opacity 0.4s ease, padding 0.5s ease;
-  background-color: var(--card-bg-color); /* The inner content background */
+  padding: 0; /* ← FIX */
+  overflow: hidden; /* ← Prevents white space */
+  transition: max-height 0.5s ease-in-out, opacity 0.4s ease, padding 0.3s ease;
 }
 
 /* Expanded state */
