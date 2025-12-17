@@ -11,6 +11,9 @@ h3, /* Added h3 */
 h4,
 h5,
 h6,
+.footer-brand,
+.footer-links,
+.footer-bottom,
 button,
 input {
   font-family: "GHFont", sans-serif;
@@ -30,7 +33,6 @@ input {
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
   background: var(--darkbg); /* dark background */
@@ -589,7 +591,6 @@ body.rtl .card__link {
   background-color: #14151e;
   color: #c0c4d8;
   padding: 3rem 1.5rem 1.5rem 1.5rem;
-  font-family: "Inter", sans-serif;
 }
 
 .footer-container {

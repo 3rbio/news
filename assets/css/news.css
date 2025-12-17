@@ -40,9 +40,8 @@
   width: 100%;
   overflow: hidden;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-  /* Smoother transition */
   transition: box-shadow 0.3s ease;
-  border: 1px solid #333;
+  border: 2px solid var(--line);
 }
 
 /* Card Header (The always visible part) */
@@ -52,15 +51,17 @@
   padding: 20px;
   cursor: pointer;
   gap: 20px;
-  /* Use the header background color */
   background-color: #14151e;
-  /* Add subtle scale/lift effect on hover */
   transition: transform 0.2s ease;
 }
 
 .news-card:not([data-expanded="true"]) .card-header:hover {
   transform: scale(1.005);
   background-color: var(--card-hover-color);
+}
+
+body.rtl .card-header {
+  flex-direction: row-reverse;
 }
 
 .news-image-preview {
@@ -75,6 +76,10 @@
 
 .header-content {
   flex-grow: 1;
+}
+body.rtl .header-content {
+  direction: rtl;
+  text-align: right;
 }
 
 .news-title {
@@ -103,6 +108,14 @@
   padding: 3px 8px;
   border-radius: 12px;
   color: var(--card-header-bg); /* Dark text on light background */
+}
+
+body.rtl .news-date time {
+  order: 2; /* time on the left */
+}
+
+body.rtl .news-date .news-tag {
+  order: 1; /* tag on the right */
 }
 
 .update-tag {
@@ -157,13 +170,12 @@
 /* --- Expanded Details Styling --- */
 
 .news-details {
-  /* Initial state: hidden */
   max-height: 0;
   opacity: 0;
   visibility: hidden;
-  /* Smoother transition */
-  transition: max-height 0.5s ease-in-out, opacity 0.4s ease, padding 0.5s ease;
-  background-color: var(--card-bg-color); /* The inner content background */
+  padding: 0; /* ← FIX */
+  overflow: hidden; /* ← Prevents white space */
+  transition: max-height 0.5s ease-in-out, opacity 0.4s ease, padding 0.3s ease;
 }
 
 /* Expanded state */
@@ -192,6 +204,13 @@
   padding-left: 15px;
 }
 
+body.rtl .full-content h3 {
+  border-right: 4px solid var(--secondary-accent);
+  border-left: none;
+  padding-right: 15px;
+  padding-left: 0;
+}
+
 .feature-icon {
   margin-right: 5px;
   font-size: 1.1em;
@@ -215,12 +234,22 @@
 }
 
 .full-content ul li::before {
-  content: "»"; /* Custom bullet point */
+  content: "»"; /* LTR bullet */
+  position: absolute;
+  inset-inline-start: 0; /* Puts bullet at left in LTR, right in RTL */
   color: var(--accent-color);
   font-weight: bold;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
+}
+
+body.rtl .full-content ul li::before {
+  content: "»";
+  direction: rtl;
+  margin-r: -15px;
+}
+
+body.rtl .full-content ul li {
+  padding-right: 20px;
+  position: a;
 }
 
 .news-image-full {
@@ -242,45 +271,134 @@
   color: var(--secondary-accent);
 }
 
-/* Responsive Adjustments */
+/* ============================================
+   📱 MOBILE & TABLET RESPONSIVE IMPROVEMENTS
+   ============================================ */
+@media (max-width: 1024px) {
+  :root {
+    --max-content-width: 95%; /* More natural fit on tablets */
+  }
+}
+
+/* --- MOBILE (Up to 768px) --- */
 @media (max-width: 768px) {
+  /* Page title */
   .page-title {
     font-size: 2.2em;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 
+  /* News card spacing */
   .news-card {
+    border-radius: 10px;
     margin-bottom: 20px;
   }
 
+  /* Header becomes cleaner */
   .card-header {
-    flex-wrap: wrap;
-    padding: 15px;
-    gap: 15px;
+    flex-wrap: nowrap;
+    padding: 12px;
+    gap: 12px;
   }
 
+  /* Image smaller to match mobile layout */
   .news-image-preview {
-    width: 80px;
+    width: 70px;
     height: 50px;
   }
 
+  /* Title scales better */
   .news-title {
+    font-size: 1.25em;
+  }
+
+  /* Stack date + tag when space is tight */
+  .news-date {
+    flex-wrap: wrap;
+    font-size: 0.85em;
+    gap: 6px;
+  }
+
+  /* Proper RTL switching still applies */
+  body.rtl .news-date {
+    justify-content: flex-end;
+  }
+
+  /* Expand button smaller */
+  .expand-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 1.1em;
+  }
+
+  /* Details container spacing */
+  .news-details {
+    padding: 18px !important;
+  }
+
+  /* Full image responsive */
+  .news-image-full {
+    max-height: 300px;
+    margin: 18px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Reset RTL header direction on mobile */
+  body.rtl .card-header {
+    flex-direction: column !important;
+  }
+
+  /* Stack everything vertically */
+  .card-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .news-title {
+    order: 1;
+    width: 100%;
+    text-align: center;
     font-size: 1.3em;
   }
 
-  .header-content {
-    min-width: unset;
+  .news-image-preview {
+    order: 2;
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .news-date {
+    order: 3;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  /* RTL still centered */
+  body.rtl .news-date {
+    direction: rtl;
+    justify-content: center;
   }
 
   .expand-btn {
-    order: 3;
-    width: 35px;
-    height: 35px;
-    font-size: 1.5em;
+    order: 4;
     align-self: center;
+    margin-top: 6px;
   }
 
-  .news-details {
-    padding: 20px;
+  .header-content {
+    width: 100%;
+    text-align: center;
+  }
+
+  body.rtl .header-content {
+    text-align: center;
   }
 }

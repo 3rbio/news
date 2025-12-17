@@ -132,6 +132,27 @@ window.translations["fr"] = {
   user_end3:
     "Pour consulter les directives complètes de création de nom d’utilisateur, visitez",
   user_end4: "Guide des noms d’utilisateur",
+  /* News Page - 3rb.io event for PC */
+  event1_title: "Défi 3rb.io ! Prix de la première place : PC RTX 5060",
+  event1_preview:
+    "Le tournoi 3rb.io démarre dans le cadre de l’événement du serveur Real, avec des prix PC gaming puissants et Discord Nitro. Affrontez les autres joueurs, entrez dans le Top 5 et gagnez des points.",
+  event1_des1:
+    "3rb.io est l’une des compétitions officielles de l’événement, et ses résultats compteront dans le total de points des participants.",
+  event1_des2: "📅 Date du tournoi :",
+  event1_des3: "Jeudi 18 décembre 2025 📆",
+  event1_des4: "De 22h00 à 23h59 (heure de La Mecque) ⏰",
+  event1_features: "Répartition des points",
+  event1_feature1: "1ʳᵉ place : 15 points",
+  event1_feature2: "2ᵉ place : 10 points",
+  event1_feature3: "3ᵉ place : 5 points",
+  event1_feature4: "4ᵉ place : 3 points",
+  event1_feature5: "5ᵉ place : 2 points",
+  event1_end1:
+    "Les règles complètes de l’événement sont disponibles sur le serveur Real via le salon real-event-rules",
+  event1_end2:
+    "Défis et couverture en direct des compétitions via le salon real-event",
+  event1_end3: "Lien du serveur Real",
+  event1_end4: "Real",
 
   /* Updates Page */
   updatesPage_Title: "Dernières mises à jour du jeu",

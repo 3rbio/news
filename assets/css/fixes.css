@@ -12,6 +12,21 @@
   --max-content-width: 1000px; /* Reduced max width for better readability */
 }
 
+.force-ltr,
+.force-ltr * {
+  /* Enforce LTR direction for the entire page's content */
+  direction: ltr !important;
+  /* Ensure text alignment is LTR (optional, but helps with consistency) */
+  text-align: left !important;
+}
+
+/* You might need to adjust margin/padding if your global RTL CSS flipped them */
+/* Example: If you have margin-left for LTR and margin-right for RTL */
+.force-ltr .fixes-full-content ul li::before {
+  margin-left: -1em !important;
+  margin-right: unset !important;
+}
+
 /* General Layout for Main Content */
 #news-container {
   max-width: var(--max-content-width);
@@ -38,12 +53,11 @@
   background-color: var(--card-bg-color);
   border-radius: var(--border-radius);
   margin-bottom: 30px; /* More space between cards */
+  width: 100%;
   overflow: hidden;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-  /* Smoother transition */
   transition: box-shadow 0.3s ease;
-  border: 1px solid #333;
-  width: 100%;
+  border: 2px solid var(--line);
 }
 
 /* Card Header (The always visible part) */
@@ -53,9 +67,7 @@
   padding: 20px;
   cursor: pointer;
   gap: 20px;
-  /* Use the header background color */
   background-color: #14151e;
-  /* Add subtle scale/lift effect on hover */
   transition: transform 0.2s ease;
 }
 
@@ -76,6 +88,7 @@
   margin: 0;
   color: var(--fixes-badge);
   line-height: 1.3;
+  font-size: 1.3em;
 }
 
 .fix-date {
@@ -150,13 +163,12 @@
 /* --- Expanded Details Styling --- */
 
 .news-details {
-  /* Initial state: hidden */
   max-height: 0;
   opacity: 0;
   visibility: hidden;
-  /* Smoother transition */
-  transition: max-height 0.5s ease-in-out, opacity 0.4s ease, padding 0.5s ease;
-  background-color: var(--card-bg-color); /* The inner content background */
+  padding: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out, opacity 0.4s ease, padding 0.3s ease;
 }
 
 /* Expanded state */
@@ -233,10 +245,6 @@
     gap: 15px;
   }
 
-  .fixes-title {
-    font-size: 1.3em;
-  }
-
   .header-content {
     min-width: unset;
   }
@@ -251,5 +259,8 @@
 
   .news-details {
     padding: 20px;
+  }
+  body.rtl .fixes-title {
+    text-align: left !important;
   }
 }

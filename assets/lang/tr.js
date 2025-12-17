@@ -126,7 +126,27 @@ window.translations["tr"] = {
   user_end3:
     "Kullanıcı adı oluşturma yönergelerinin tamamını görmek için ziyaret edin",
   user_end4: "Kullanıcı Adı Kılavuzu",
-
+  /* News Page - 3rb.io event for PC */
+  event1_title: "3rb.io Meydan Okuması! Birincilik Ödülü: RTX 5060 PC",
+  event1_preview:
+    "3rb.io turnuvası, Real sunucusu etkinliği kapsamında başlıyor. Güçlü oyuncu bilgisayarı ödülleri ve Discord Nitro sizi bekliyor! Yarışın, Top 5’e girin ve puan kazanın.",
+  event1_des1:
+    "3rb.io, etkinliğin resmi yarışmalarından biridir ve sonuçları katılımcıların genel etkinlik puanlarına dahil edilecektir.",
+  event1_des2: "📅 Turnuva Tarihi:",
+  event1_des3: "18 Aralık 2025 Perşembe 📆",
+  event1_des4: "22:00 – 23:59 (Mekke Saati) ⏰",
+  event1_features: "Puan Dağılımı",
+  event1_feature1: "1. sıra: 15 puan",
+  event1_feature2: "2. sıra: 10 puan",
+  event1_feature3: "3. sıra: 5 puan",
+  event1_feature4: "4. sıra: 3 puan",
+  event1_feature5: "5. sıra: 2 puan",
+  event1_end1:
+    "Etkinliğin tüm kuralları Real sunucusunda real-event-rules kanalında bulunabilir",
+  event1_end2:
+    "Yarışmaların canlı yayınları ve mücadeleler real-event kanalı üzerinden yapılacaktır",
+  event1_end3: "Real Sunucu Bağlantısı",
+  event1_end4: "Real",
   /* Updates Page */
   updatesPage_Title: "Oyunun Son Güncellemeleri",
 };
