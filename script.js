@@ -32,7 +32,7 @@ async function loadLanguage(lang) {
       return;
     }
     const script = document.createElement("script");
-    script.src = `../assets/lang/${lang}.js`;
+    script.src = `./assets/lang/${lang}.js`;
     script.dataset.langScript = lang;
     script.onload = () => resolve();
     script.onerror = () => reject(`Could not load language file: ${lang}`);
@@ -94,7 +94,6 @@ function updateStatusUI(lang) {
   const traceTLS = document.getElementById("trace-tls");
   const traceScheme = document.getElementById("trace-scheme");
 
-  // ترجمة تقييم TLS
   const tls = lastTraceData.tls || "";
   if (/TLSv1\.3/i.test(tls)) traceTLS.textContent = t.tls_strong || "Strong";
   else if (/TLSv1\.2/i.test(tls))
@@ -103,7 +102,6 @@ function updateStatusUI(lang) {
     traceTLS.textContent = t.tls_weak || "Weak";
   else traceTLS.textContent = "—";
 
-  // ترجمة تقييم Scheme
   const scheme = lastTraceData.visit_scheme || "";
   if (scheme.toLowerCase() === "https")
     traceScheme.textContent = t.scheme_secure || "Secure";
@@ -111,7 +109,6 @@ function updateStatusUI(lang) {
     traceScheme.textContent = t.scheme_weak || "Weak";
   else traceScheme.textContent = "—";
 
-  // حالة الاتصال والوقت المحلي حسب اللغة
   text.textContent = lastTraceData.isOnline
     ? t.status_online || "Site Status"
     : t.status_offline || "Site Status";
@@ -142,7 +139,6 @@ function checkStatus() {
       // حفظ البيانات عالمياً وتثبيت الوقت
       lastTraceData = { ...parsed, isOnline: true, timestamp: new Date() };
 
-      document.getElementById("trace-country").textContent = parsed.loc || "—";
       indicator.classList.remove("checking");
       indicator.classList.add("online");
 
@@ -269,7 +265,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error(err);
   }
 
-  // منطق تمديد بطاقات الأخبار
   const newsCards = document.querySelectorAll(".news-card");
   newsCards.forEach((card) => {
     const expandBtn = card.querySelector(".expand-btn");
@@ -291,7 +286,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   });
 
-  // قائمة الموبايل
   const toggleMenu = document.querySelector(".menu-toggle");
   const mobileNav = document.querySelector(".mobile-nav");
   if (toggleMenu && mobileNav) {
@@ -301,7 +295,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
-// إخفاء الـ Splash Screen
 window.addEventListener("load", () => {
   const splash = document.getElementById("splash");
   if (splash) {
