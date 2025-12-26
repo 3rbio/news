@@ -182,4 +182,8 @@ window.translations["tr"] = {
   top4: "🇯🇴 Ürdün",
   top5: "🇮🇶 Irak",
   lastUpdateLabel: "Son güncelleme:",
+  status_title: "3rb.io durumu tek bir yerde",
+  status_text:
+    "Yeni istatistik sayfası, oyun ziyaretlerini, sitenin mevcut durumunu ve önemli veri ve istatistikleri tek bir yerde takip etmenizi sağlar",
+  view_full_status: "Durumu Gör »",
 };
