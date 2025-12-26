@@ -182,3 +182,4 @@ window.translations["en"] = {
     "The new statistics page allows you to track game visits, the current status of the site, and a set of important data and statistics all in one place",
   view_full_status: "View Status »",
 };
+ 
