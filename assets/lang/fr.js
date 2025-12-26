@@ -189,4 +189,8 @@ window.translations["fr"] = {
   top4: "🇯🇴 Jordanie",
   top5: "🇮🇶 Irak",
   lastUpdateLabel: "Dernière mise à jour :",
+  status_title: "Statut de 3rb.io en un seul endroit",
+  status_text:
+    "La nouvelle page des statistiques vous permet de suivre les visites du jeu, l'état actuel du site et un ensemble de données et statistiques importantes, le tout au même endroit",
+  view_full_status: "Voir le statut »",
 };
