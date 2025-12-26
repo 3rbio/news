@@ -1,189 +1,189 @@
 // lang/ar.js
 window.translations = window.translations || {};
-window.translations["ru"] = {
-  site_title: "Агарио Арабский",
-  visit_game: "Посетить игру",
-  game_status: "Статус",
-  game_news: "Новости игры",
-  game_fixes: "Исправления",
-  game_updates: "Обновления",
-  docs: "Документация",
-  hero_title: "Добро пожаловать в последние новости 3rb.io",
-  hero_follow: "Следите здесь",
+window.translations["tr"] = {
+  site_title: "3rb.io Arapça",
+  visit_game: "Oyunu Ziyaret Et",
+  game_status: "Durum",
+  game_news: "Oyun Haberleri",
+  game_fixes: "Düzeltmeler",
+  game_updates: "Güncellemeler",
+  docs: "Belgeler",
+  hero_title: "En son 3rb.io haberlerine hoş geldiniz",
+  hero_follow: "Buradan takip et",
   hero_text:
-    "все последние новости, обновления, исправления и эксклюзивный контент в 3rb.io!",
-  news1_title: "Долгожданное обновление игры",
+    "3rb.io’daki en son haberler, güncellemeler, düzeltmeler ve özel içeriklerin tümü!",
+  news1_title: "Uzun Süredir Beklenen Oyun Güncellemesi",
   news1_text:
-    "Следите за официальным обновлением долгожданной арабской версии игры 3rb.io",
-  news1_text:
-    "Мы запускаем глобальный турнир 3rb.io 2025. Регистрируйтесь и соревнуйтесь за лучшие награды!",
-  news2_title: "Выпуск версии 0.1.0",
+    "Yıllardır beklenen 3rb.io oyununun resmi güncellemesini kaçırmayın",
+  news2_title: "Sürüm 0.1.0 Yayınlandı",
   news2_text:
-    "Раздел, посвящённый последним прямым обновлениям игры—следите за всеми объявлениями",
-  news3_title: "Сообщество в центре внимания",
-  news3_text: "Посмотрите на лучших создателей месяца и их потрясающие уровни.",
-  footer_text: "© 2025 3rb.io — Все права защищены",
-  news_section_title: "Последние Новости, Обновления и Исправления",
-  read_more: "Читать далее »",
+    "Oyunun en son canlı güncellemeleri için ayrılmış bir bölüm—tüm duyuruları takip edin",
+  news3_title: "Topluluk Öne Çıkanlar",
+  news3_text:
+    "Bu ayın öne çıkan yaratıcılarını ve hayran yapımı haritalarını keşfet.",
+  footer_text: "© 2025 3rb.io — Tüm hakları saklıdır",
   footer_desc:
-    "Будьте в курсе последних новостей, обновлений и событий сообщества на 3rb.io!",
-  footer_social: "Следите за нами в",
-  footer_links: "Наши сайты",
-  view_full_notes: "Полные заметки »",
-  patch_details: "Детали патча »",
+    "3rb.io’daki en son haberler, güncellemeler ve topluluk etkinliklerinden haberdar olun!",
+  footer_social: "Bizi takip edin",
+  footer_links: "Sitemiz",
+  news_section_title: "Son Haberler, Güncellemeler ve Düzeltmeler",
+  read_more: "Devamını Oku »",
+  view_full_notes: "Tüm Notları Gör »",
+  patch_details: "Yama Detayları »",
   /* News Page */
-  newsPage_Title: "Последние новости игры",
-  vip_news_title: "VIP-подписка впервые появится в 3rb.io Arabia!",
+  newsPage_Title: "Oyunun Son Haberleri",
+  vip_news_title: "VIP Üyelik ilk kez 3rb.io Arabia’da geliyor!",
   vip_news_preview:
-    "👇 Получите доступ к эксклюзивным функциям и контенту, доступным только VIP-участникам — следите за подробностями.",
+    "👇 Sadece VIP üyeler için özel özellikler ve içeriklere erişim kazanın — tüm detaylar için bizi takip edin.",
   vip_full_content:
-    "Наконец-то! В 3rb.io Arabia запускается VIP-подписка. Вас ждёт совершенно новый опыт — уникальные преимущества и эксклюзивный контент только для премиум-игроков.",
-  vip_feature_title: "Особенности VIP-подписки",
+    "Sonunda! 3rb.io Arabia’da VIP Üyelik geliyor. Yepyeni bir deneyim seni bekliyor — sadece premium üyelerin erişebileceği benzersiz avantajlar ve özel içerikler seni bekliyor.",
+  vip_feature_title: "VIP Özellikleri",
   vip_feature_one:
-    "Эксклюзивные скины (6 уникальных скинов, которых нельзя получить другими способами).",
+    "Özel görünümler (Başka hiçbir şekilde elde edilemeyen 6 özel skin).",
   vip_feature_two:
-    "Особые преимущества в игре, делающие ваш стиль и игровой процесс более ярким и интересным.",
-  vip_feature_three:
-    "Специальный значок в игре, показывающий, что вы — из числа элиты.",
+    "Oyun içi avantajlar, tarzını güçlendirir ve deneyimini daha eğlenceli hale getirir.",
+  vip_feature_three: "Oyunda seni seçkin biri olarak gösteren özel bir rozet.",
   vip_feature_four:
-    "Множество дополнительных функций в будущих обновлениях — только для VIP-игроков.",
+    "Gelecek güncellemelerde VIP üyelerine özel birçok yeni özellik daha eklenecek.",
   vip_feature_x:
-    "… Следите за полным анонсом дополнительных преимуществ — это только начало!",
+    "… Daha fazla özel avantajın tam duyurusu yakında — bu sadece başlangıç!",
   vip_feature_xi:
-    "🏆 VIP-подписка в 3rb.io Arabia — потому что настоящий стиль заслуживает признания.",
+    "🏆 3rb.io Arabia’da VIP Üyelik — çünkü gerçek ayrıcalık kendini belli eder.",
   /* News Page - Levels */
   levels_update_title:
-    "Таинственная утечка: новая система уровней… и эксклюзивные скины!",
+    "Gizemli Sızıntı: Yeni Seviye Sistemi... ve Özel Skinler!",
   levels_preview:
-    "Наконец-то у игры появилась цель! Узнай о новой системе уровней, которая появится в следующем обновлении.",
+    "Artık oynamanın bir amacı var! Yeni seviye sistemi yakında gelen güncellemede seni bekliyor!",
 
-  levels_full_des1: "🔥 Наконец-то играть стало осмысленно!",
+  levels_full_des1: "🔥 Nihayet oyunun bir hedefi var!",
   levels_full_des2:
-    "Начни с уровня 0 и поднимись до 100. Каждые 5 уровней открывают эксклюзивные скины, которых нет больше ни у кого 😎. Теперь игра стала настоящим испытанием — докажи свой прогресс и выделись среди других! По утечкам, новая система уровней полностью изменит игровой процесс!",
+    "Seviye 0’dan başla ve 100’e kadar yüksel! Her 5 seviyede bir, sadece senin sahip olabileceğin özel skinleri aç 😎. Artık oyunda rekabet, ilerleme ve tarz bir arada! Sızan bilgilere göre geliştirilen yeni seviye sistemi, oyun deneyimini tamamen değiştirecek.",
   levels_full_des3:
-    "По предварительным данным, система будет включать до 100 уровней, и каждые 5 уровней игрок будет получать уникальный скин, недоступный другим способом.",
+    "İlk bilgilere göre sistem 100. seviyeye kadar çıkacak ve her 5 seviyede bir benzersiz bir skin kazanacaksın.",
   levels_full_des4:
-    "Грядущее обновление также добавит полноценную систему опыта — твой уровень будет расти по мере игры!",
-  levels_features: "Особенности системы уровней",
-  leves_feature_one: "Каждые 5 уровней — новый эксклюзивный скин",
-  leves_feature_two: "Максимальный уровень: 100",
+    "Yeni güncelleme ayrıca tam bir deneyim (XP) sistemi getirecek — ne kadar çok oynarsan, o kadar hızlı seviye atlayacaksın!",
+  levels_features: "Seviye Sistemi Özellikleri",
+  leves_feature_one: "Her 5 seviyede — yeni özel skin",
+  leves_feature_two: "Maksimum Seviye: 100",
   leves_feature_three:
-    "Продвинутая система опыта с отображением прогресса и текущего уровня во время игры",
-  leves_feature_four: "Показ уровня в профиле игрока",
-  leves_feature_five: "Таблица лидеров: топ-100 игроков по опыту",
-  leves_feature_six: "Таблица лидеров: топ-100 игроков по монетам",
-  leves_feature_seven: "Дополнительные функции пока не раскрыты…",
-  leves_end1: "... Готовься",
-  leves_end2: "💪 Система уровней появится в следующем обновлении",
-  leves_end3: "👑 Посмотрим, кто первым достигнет уровня",
+    "Oyun sırasında mevcut seviyeni ve ilerlemeni gösteren gelişmiş XP sistemi",
+  leves_feature_four: "Profilinde seviye göstergesi",
+  leves_feature_five:
+    "En yüksek deneyime sahip ilk 100 oyuncu liderlik tablosu",
+  leves_feature_six: "En çok coin’e sahip ilk 100 oyuncu listesi",
+  leves_feature_seven: "Henüz açıklanmamış ek özellikler…",
+  leves_end1: "... Hazır ol",
+  leves_end2: "💪 Seviye Sistemi bir sonraki güncellemede geliyor",
+  leves_end3: "👑 Bakalım kim ilk 100. seviyeye ulaşacak",
   /* News Page Friends */
-  friends_update_title: "✅ Список друзей подтверждён в следующем обновлении!",
+  friends_update_title: "✅ Arkadaş Listesi Sonraki Güncellemede Onaylandı!",
   friends_update_preview:
-    "После более чем двух лет с момента первого бета-запуска в начале 2021 года, похоже, что долгожданная система друзей наконец-то вернётся официально и в полном виде в следующем обновлении игры.",
+    "2021’in başlarındaki ilk beta sürümünden iki yıldan fazla bir süre sonra, beklenen Arkadaş Sistemi sonunda oyunun bir sonraki güncellemesiyle birlikte tam ve resmi olarak geri dönüyor.",
   friends_update_des1:
-    "Новая система позволит полностью управлять списком друзей — как из главного меню, так и прямо во время игры через специальную иконку на экране.",
-  friends_update_features: "Особенности системы друзей",
-  friends_feature_one: "Просматривай друзей и узнавай, кто сейчас онлайн",
-  friends_feature_two: "Смотри, в каком режиме игры находятся твои друзья",
-  friends_feature_three: "Быстрый доступ к списку друзей прямо во время игры",
-  friends_feature_four: "Принимай или отклоняй новые запросы в друзья",
+    "Yeni sistem, arkadaş listesini tamamen yönetmeni sağlıyor — ister ana menüden ister oyun içindeki özel bir simge üzerinden.",
+  friends_update_features: "Arkadaş Listesi Özellikleri",
+  friends_feature_one: "Arkadaşlarını gör ve kimin çevrimiçi olduğunu öğren",
+  friends_feature_two: "Arkadaşlarının şu anda hangi modda oynadığını gör",
+  friends_feature_three: "Oynarken arkadaş listene kolay erişim",
+  friends_feature_four: "Yeni arkadaşlık isteklerini kabul et veya reddet",
   friends_feature_five:
-    "Полный контроль над списком с более понятным и плавным интерфейсом",
+    "Daha net ve akıcı bir arayüzle listeni tamamen kontrol et",
   friends_feature_x:
-    "По слухам, система всё ещё находится в тестовой фазе и может иметь мелкие ошибки, но в данный момент активно дорабатывается для повышения стабильности и удобства.",
+    "Sızan bilgilere göre sistem hâlâ test aşamasında ve küçük sorunlar içerebilir, ancak performans ve deneyimi geliştirmek için yoğun şekilde geliştiriliyor.",
   friends_end1:
-    "… Готовься — следующее обновление принесёт не просто улучшения,",
-  friends_end2: "новая система друзей изменит способ общения в игре!",
+    "… Hazır olun — bir sonraki güncelleme sadece küçük iyileştirmeler getirmeyecek,",
+  friends_end2:
+    "Yeni Arkadaş Sistemi oyundaki iletişim biçimini tamamen değiştirecek!",
   /* News Page - 3rb.io Username System */
-  user_title: "Следующий этап в 3rb.io... уже формируется!",
+  user_title: "3rb.io’da yeni dönem... şekillenmeye başladı!",
   user_preview:
-    "... В мире 3rb.io уникальность — это больше, чем просто стиль игры",
+    "3rb.io dünyasında farklı olmak artık sadece bir oyun stili değil ...",
   user_des1:
-    "!!! Скоро у каждого игрока появится уникальная личность в игре — твое имя, твоя личность и твой стиль",
+    "Yakında her oyuncunun oyunda benzersiz bir kimliği olacak — ismin, tarzın ve kişiliğin !!!",
   user_des2:
-    "Полностью новая система входа внедрена эксклюзивным способом, чтобы сделать твой опыт еще более уникальным и организованным, чем когда-либо.",
+    "Tamamen yeni bir giriş sistemi, deneyimini her zamankinden daha özel ve düzenli hale getirmek için benzersiz bir şekilde geliştirildi.",
   user_des4:
-    "Теперь ты сможешь войти через Discord или Google — но на этот раз... с совершенно новой идеей!",
-  user_des6: "Мы больше не используем имена пользователей из твоих аккаунтов,",
+    "Artık Discord veya Google üzerinden giriş yapabileceksin — ama bu sefer... tamamen farklı bir fikirle!",
+  user_des6: "Artık kullanıcı adlarını hesaplarından çekmiyoruz,",
   user_des7:
-    "Теперь имя пользователя создается при первом входе — имя, которое отражает твою личность в 3rb.io и не может быть изменено.",
+    "Bunun yerine, ilk girişinde sana özel bir kullanıcı adı oluşturulacak — 3rb.io’daki kimliğini temsil edecek ve asla değiştirilemeyecek bir isim.",
   user_des9:
-    "Эта новая система призвана положить конец хаосу и дать каждому игроку уникальную и персонализированную идентичность.",
-  user_features: "Особенности системы имени пользователя",
+    "Bu yeni sistem, rastgeleliği sona erdirmek ve her oyuncuya benzersiz bir kimlik kazandırmak için geliştirildi.",
+  user_features: "Kullanıcı Adı Sisteminin Özellikleri",
   user_feature1:
-    "Предоставляет каждому игроку постоянное и уникальное имя пользователя, которое нельзя повторить.",
+    "Her oyuncuya benzersiz ve kalıcı bir kullanıcı adı sağlar; tekrarlanamaz.",
   user_feature2:
-    "Предотвращает беспорядок и обеспечивает организованную систему выбора имен.",
+    "Rastgeleliği engeller ve düzenli bir isim seçimi ortamı sunar.",
   user_feature3:
-    "Позволяет выбрать имя пользователя при первом входе — оно не будет взято из других учетных записей.",
+    "İlk girişinde kullanıcı adını kendin seçmene izin verir — başka bir hesaptan alınmaz.",
   user_feature4:
-    "Использует интеллектуальную систему проверки, мгновенно отклоняющую неподходящие или дублирующиеся имена.",
+    "Uygunsuz veya yinelenen adları anında reddeden akıllı bir doğrulama sistemi kullanır.",
   user_feature5:
-    "Полностью соответствует политике безопасности и модерации 3rb.io, защищая сообщество от оскорбительных имен.",
+    "Topluluğu korumak için 3rb.io’nun güvenlik ve denetim politikalarına tamamen uygundur.",
   user_end1:
-    "Любое имя пользователя, нарушающее правила или содержащее неприемлемые слова,",
+    "Kuralları ihlal eden veya uygunsuz kelimeler içeren herhangi bir kullanıcı adı",
   user_end2:
-    "будет строго обработано системой автоматической модерации и проверки.",
+    "otomatik inceleme ve denetim sistemi tarafından sıkı bir şekilde işlenecektir.",
   user_end3:
-    "Чтобы ознакомиться с полными правилами создания имени пользователя, посетите",
-  user_end4: "Руководство по именам пользователей",
+    "Kullanıcı adı oluşturma yönergelerinin tamamını görmek için ziyaret edin",
+  user_end4: "Kullanıcı Adı Kılavuzu",
   /* News Page - 3rb.io event for PC */
-  event1_title: "Испытание 3rb.io! Приз за первое место: ПК с RTX 5060",
+  event1_title: "3rb.io Meydan Okuması! Birincilik Ödülü: RTX 5060 PC",
   event1_preview:
-    "Турнир 3rb.io проходит в рамках мероприятия сервера Real и предлагает мощные призы в виде игрового ПК и Discord Nitro. Соревнуйтесь, войдите в Топ-5 и зарабатывайте очки!",
+    "3rb.io turnuvası, Real sunucusu etkinliği kapsamında başlıyor. Güçlü oyuncu bilgisayarı ödülleri ve Discord Nitro sizi bekliyor! Yarışın, Top 5’e girin ve puan kazanın.",
   event1_des1:
-    "3rb.io является одним из официальных соревнований мероприятия, и его результаты будут учитываться в общем зачёте участников.",
-  event1_des2: "📅 Дата турнира:",
-  event1_des3: "Четверг, 18 декабря 2025 г. 📆",
-  event1_des4: "С 22:00 до 23:59 (время Мекки) ⏰",
-  event1_features: "Распределение очков",
-  event1_feature1: "1-е место: 15 очков",
-  event1_feature2: "2-е место: 10 очков",
-  event1_feature3: "3-е место: 5 очков",
-  event1_feature4: "4-е место: 3 очка",
-  event1_feature5: "5-е место: 2 очка",
+    "3rb.io, etkinliğin resmi yarışmalarından biridir ve sonuçları katılımcıların genel etkinlik puanlarına dahil edilecektir.",
+  event1_des2: "📅 Turnuva Tarihi:",
+  event1_des3: "18 Aralık 2025 Perşembe 📆",
+  event1_des4: "22:00 – 23:59 (Mekke Saati) ⏰",
+  event1_features: "Puan Dağılımı",
+  event1_feature1: "1. sıra: 15 puan",
+  event1_feature2: "2. sıra: 10 puan",
+  event1_feature3: "3. sıra: 5 puan",
+  event1_feature4: "4. sıra: 3 puan",
+  event1_feature5: "5. sıra: 2 puan",
   event1_end1:
-    "Полные правила мероприятия доступны на сервере Real в канале real-event-rules",
-  event1_end2: "Испытания и прямая трансляция соревнований в канале real-event",
-  event1_end3: "Ссылка на сервер Real",
+    "Etkinliğin tüm kuralları Real sunucusunda real-event-rules kanalında bulunabilir",
+  event1_end2:
+    "Yarışmaların canlı yayınları ve mücadeleler real-event kanalı üzerinden yapılacaktır",
+  event1_end3: "Real Sunucu Bağlantısı",
   event1_end4: "Real",
-
   /* Updates Page */
-  updatesPage_Title: "Последние обновления игры",
+  updatesPage_Title: "Oyunun Son Güncellemeleri",
 
   /* Status Page */
-  statusPage_Title: "3rb.io - Статистика сайта 3rb.io на арабском",
-  clickSiteN: "тысяча",
-  status_checking: "Проверка...",
-  status_checking1: "Состояние сервера",
-  lastCheck1: "Скоро" /* TEMP */,
-  last_update: "Последнее обновление:",
-  country: "Страна",
-  encryption_status: "Статус шифрования",
-  connection_status: "Статус подключения",
-  status_online: "Состояние сайта",
-  status_offline: "Сайт недоступен",
-  tls_strong: "Сильный",
-  tls_medium: "Средний",
-  tls_weak: "Слабый",
-  scheme_secure: "Безопасно",
-  scheme_weak: "Слабый",
-  last30days: "Последние 30 дней",
-  lastweek: "Последние 7 дней",
-  majorCountries: "Основные страны",
+  statusPage_Title: "3rb.io - 3rb.io Arapça Site İstatistikleri",
+  clickSiteN: "bin",
+  status_checking: "Kontrol ediliyor...",
+  status_checking1: "Sunucu durumu",
+  lastCheck1: "Yakında" /* TEMP */,
+  last_update: "Son güncelleme:",
+  country: "Ülke",
+  encryption_status: "Şifreleme durumu",
+  connection_status: "Bağlantı durumu",
+  status_online: "Site durumu",
+  status_offline: "Site çevrimdışı",
+  tls_strong: "Güçlü",
+  tls_medium: "Orta",
+  tls_weak: "Zayıf",
+  scheme_secure: "Güvenli",
+  scheme_weak: "Zayıf",
+  last30days: "Son 30 gün",
+  lastweek: "Son 7 gün",
+  majorCountries: "Başlıca Ülkeler",
   countriesHelp:
-    "Указывает географическое расположение пользователей, которые кликнули по вашему сайту в результатах поиска Google за указанный период",
-  visitorStatistics: "Статистика посетителей",
+    "Bu, kullanıcıların belirtilen süre içinde Google arama sonuçlarından sitenize tıkladıkları coğrafi konumu gösterir",
+  visitorStatistics: "Ziyaretçi İstatistikleri",
   visitorsHelp:
-    "Это статистика посетителей арабского сайта 3rb.io по результатам поиска Google за указанный период",
-  top1: "🇪🇬 Египет",
-  top2: "🇸🇦 Саудовская Аравия",
-  top3: "🇩🇿 Алжир",
-  top4: "🇯🇴 Иордания",
-  top5: "🇮🇶 Ирак",
-  lastUpdateLabel: "Последнее обновление:",
-  status_title: "Статус 3rb.io в одном месте",
+    "Bunlar, belirtilen süre içinde Google arama sonuçları üzerinden 3rb.io Arapça sitesinin ziyaretçi istatistikleridir",
+  top1: "🇪🇬 Mısır",
+  top2: "🇸🇦 Suudi Arabistan",
+  top3: "🇩🇿 Cezayir",
+  top4: "🇯🇴 Ürdün",
+  top5: "🇮🇶 Irak",
+  lastUpdateLabel: "Son güncelleme:",
+  status_title: "3rb.io durumu tek bir yerde",
   status_text:
-    "Новая страница статистики позволяет отслеживать посещения игры, текущий статус сайта и набор важных данных и статистики в одном месте",
-  view_full_status: "Посмотреть статус »",
+    "Yeni istatistik sayfası, oyun ziyaretlerini, sitenin mevcut durumunu ve önemli veri ve istatistikleri tek bir yerde takip etmenizi sağlar",
+  view_full_status: "Durumu Gör »",
 };
