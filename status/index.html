@@ -1,317 +1,344 @@
-<!DOCTYPE html>
-<html lang="en">
+/* ====== Variables ====== */
+:root {
+  --darkbg: #0d0e16;
+  --text-color: #f2f2f2;
+  --card-bg: #14151e;
+  --highlight-color: #444746;
+  --primary-color: #ff0066;
+  --Color: #00bcd4;
+  --line: #363a47;
+  --secondary-btn-bg: #282a37;
+  --darktext: #99aab5;
+}
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3rb.io Status - احصائيات اقاريو العربية</title>
-  <meta name="description" content="تابع احصائيات لعبة اقاريو العربية مباشرة 3rb.io">
-  <meta name="keywords"
-    content="3rb.io, اخبار, اقاريو,احصائيات,status, اخبار اقاريو العربية, تحديثات, إصلاحات اقاريو العربية, اقاريو العربية, اقاريو العربيه">
-  <meta name="author" content="3rb.io">
+html,
+body {
+  overflow-x: hidden;
+}
 
-  <link rel="icon" href="/favicon.ico" type="image/png" />
-  <link rel="stylesheet" href="../assets/css/style.css" />
-  <link rel="stylesheet" href="../assets/css/status.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+/* ====== Page Title ====== */
+.page-title {
+  text-align: center;
+  font-size: 2.8em;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: var(--text-color);
+}
 
+/* ====== Status Cards Container ====== */
+.status-cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="احصائيات اقاريو العربية - 3rb.io Status">
-  <meta property="og:description" content="تابع احصائيات لعبة اقاريو العربية مباشرة 3rb.io">
-  <meta property="og:image" content="https://news.3rb.io/logo.png">
-  <meta property="og:url" content="https://news.3rb.io/status">
-  <meta property="og:type" content="website">
+/* ====== Status Card ====== */
+.status-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
+  color: var(--text-color);
+}
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="احصائيات اقاريو العربية - 3rb.io Status">
-  <meta name="twitter:description" content="تابع احصائيات لعبة اقاريو العربية مباشرة 3rb.io">
-  <meta name="twitter:image" content="https://news.3rb.io/logo.png">
+#status-indicator,
+#server-status-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
 
-  <!-- Schema.org JSON-LD for Website -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "احصائيات اقاريو العربية - 3rb.io Status",
-    "url": "https://news.3rb.io/status/",
-    "inLanguage": "ar",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://news.3rb.io/news/?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: gray;
+}
+
+#status-indicator.online .dot {
+  background: #2ecc71;
+}
+#status-indicator.offline .dot {
+  background: #e74c3c;
+}
+#status-indicator.checking .dot {
+  background: #f1c40f;
+  animation: pulse 1s infinite;
+}
+
+#server-status-indicator.coming-soon .dot {
+  background: #f1c40f;
+}
+
+.status-meta {
+  margin-top: 8px;
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.4;
   }
-  </script>
+  50% {
+    opacity: 1;
+  }
+}
 
-</head>
+/* ====== Stats Section ====== */
+.stats-section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background: var(--card-bg);
+  width: 90%;
+  border-radius: 12px;
+  border: 2px solid var(--line);
+  padding: 20px;
+}
 
-<body>
-  <div id="header-container"></div>
-  <header>
-    <div class="header-branding">
-      <div class="brand-left">
-        <a href="../">
-          <img src="/assets/images/favicon.png" alt="News 3rb.io Logo" class="logo" />
-          <span class="site-title" data-i18n="site_title">3rb.io Status</span>
-        </a>
-      </div>
-      <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
-      <nav class="mobile-nav">
-        <a href="https://3rb.io" target="_blank" data-i18n="visit_game">Visit Game</a>
-        <a href="https://docs.3rb.io/" target="_blank" data-i18n="docs">Docs</a>
-        <a href="/news/" target="_self" data-i18n="game_news"></a>
-        <a href="/fixes/" target="_self" data-i18n="game_fixes"></a>
-        </a>
-      </nav>
-    </div>
+.stats-title {
+  text-align: left;
+  margin-bottom: 25px;
+}
 
-    <div class="header-controls">
-      <div id="custom-lang-switch" class="lang-switch-dropdown">
-        <button class="current-lang-display" aria-expanded="false" aria-controls="lang-list">
-          <span id="current-lang-flag" data-lang="ar">🌐</span>
-        </button>
+/* ====== Stats Grid ====== */
+.stats-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
 
-        <ul id="lang-list" class="lang-list" role="listbox">
-          <li role="option" data-lang="ar" data-flag="🇸🇦" data-name="العربية">
-            🇸🇦 العربية
-          </li>
+.stat-card {
+  background: var(--darkbg);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 300px;
+}
 
-          <li role="option" data-lang="en" data-flag="🇬🇧" data-name="English">
-            🇬🇧 English
-          </li>
+.stat-label {
+  font-size: 14px;
+  opacity: 0.7;
+}
+.stat-value {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--Color);
+}
+.stat-change {
+  margin-top: 6px;
+  font-size: 13px;
+}
+.stat-change.up {
+  color: var(--Color);
+}
+.stat-change.down {
+  color: #e74c3c;
+}
 
-          <li role="option" data-lang="es" data-flag="🇪🇸" data-name="Español">
-            🇪🇸 Español
-          </li>
+/* ====== Countries Section ====== */
+.countries-section {
+  margin-top: 35px;
+  background: var(--darkbg);
+  padding: 20px;
+  border-radius: 12px;
+}
 
-          <li role="option" data-lang="fr" data-flag="🇫🇷" data-name="Français">
-            🇫🇷 Français
-          </li>
+.countries-header h3 {
+  margin: 0 0 8px;
+}
 
-          <li role="option" data-lang="tr" data-flag="🇹🇷" data-name="Türkçe">
-            🇹🇷 Türkçe
-          </li>
+.help-text {
+  display: block;
+  font-size: 13px;
+  opacity: 0.65;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
 
-          <li role="option" data-lang="ru" data-flag="🇷🇺" data-name="Русский">
-            🇷🇺 Русский
-          </li>
-        </ul>
-      </div>
-    </div>
-  </header>
+.countries-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-  <main id="news-container">
-    <h1 class="page-title" data-i18n="statusPage_Title"></h1>
+.countries-list li {
+  margin-bottom: 14px;
+}
 
-    <!-- Container للحالات -->
-    <div class="status-cards-container">
-      <!-- حالة الموقع -->
-      <section class="status-card">
-        <div id="status-indicator" class="status-indicator checking">
- 
-            <span class="dot"></span>
-   
+.country-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
 
+.country-name {
+  font-weight: 500;
+}
+.country-percent {
+  font-weight: bold;
+  color: var(--Color);
+}
 
-          <span id="status-text" data-i18n="status_checking">جاري الفحص...</span>
-        </div>
-        <div class="status-meta">
-          <span data-i18n="last_update">آخر تحديث:</span> <span id="last-check">—</span>
-        </div>
-      </section>
+.country-bar {
+  margin-top: 6px;
+  height: 8px;
+  background: var(--card-bg);
+  border-radius: 6px;
+  overflow: hidden;
+}
 
-       <section class="status-card" style="opacity: .5;">
-        <div id="status-indicator" class="status-indicator checking">
- 
-          
-   
+.country-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--Color), var(--Color));
+  border-radius: 6px;
+  transition: width 0.6s ease;
+}
 
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+  .status-cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
-          <span id="status-text" data-i18n="status_checking1">حالة الخادم</span>
-        </div>
-        <div class="status-meta">
-         <!--  <span data-i18n="last_update">آخر تحديث:</span> --> <span data-i18n="lastCheck1"></span>
-        </div>
-      </section>
+/* Tooltip container */
+.tooltip-icon {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 0.9em;
+  color: var(--line);
+  margin-left: 5px;
+}
 
-      <!-- الدولة -->
-      <section class="status-card">
-        <div class="status-indicator info">
+/* Tooltip text */
+.tooltip-icon .tooltip-text {
+  visibility: hidden;
+  width: 280px;
+  background-color: var(--secondary-btn-bg);
+  color: #fff;
+  text-align: left;
+  padding: 8px 12px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 13px;
+  line-height: 1.5;
+  pointer-events: none;
+}
 
-          <span data-i18n="country">الدولة</span>
-        </div>
-        <div class="status-meta" id="trace-country">—</div>
-      </section>
+.tooltip-icon .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #222 transparent transparent transparent;
+}
 
-      <!-- التشفير -->
-      <section class="status-card">
-        <div class="status-indicator info">
+.tooltip-icon:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
 
-          <span data-i18n="encryption_status">حالة التشفير</span>
-        </div>
-        <div class="status-meta" id="trace-tls">—</div>
-      </section>
+body.rtl .tooltip-text {
+  text-align: right !important;
+}
 
-      <!-- الاتصال -->
-      <section class="status-card">
-        <div class="status-indicator info">
+.visitorsLastUpdate {
+  color: var(--darktext);
+  text-align: left;
+  margin-bottom: 0px;
+}
 
-          <span data-i18n="connection_status">حالة الاتصال</span>
-        </div>
-        <div class="status-meta" id="trace-scheme">—</div>
-      </section>
-    </div>
+body.rtl .visitorsLastUpdate {
+  text-align: right !important;
+}
 
+@media (min-width: 769px) and (max-width: 1024px) {
+  .status-cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+  }
 
+  .status-card {
+    width: auto;
+    max-width: 100%;
+    padding: 15px;
+  }
 
-    <!-- إحصائيات الزوار -->
-    <section class="stats-section">
-      <h2 class="stats-title">
-        <span data-i18n="visitorStatistics">إحصائيات الزوار</span>
-        <span class="tooltip-icon">ⓘ
-          <span class="tooltip-text" data-i18n="visitorsHelp">
-          </span>
-        </span>
-      </h2>
+  .page-title {
+    font-size: 2.2em;
+    text-align: right;
+    margin-right: 5%;
+  }
 
+  .stat-value {
+    font-size: 26px;
+  }
+}
 
-      <div class="stats-grid">
-        <div class="stat-card">
-          <span class="stat-label" data-i18n="lastweek">آخر 7 أيام</span>
-          <span class="stat-value" id="visits-7d">0</span>
-          <div class="stat-change" id="change-7d"></div>
-        </div>
+/* تنسيقات الجوال (Mobile) */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 1.8em;
+    text-align: center;
+  }
 
-        <div class="stat-card">
-          <span class="stat-label" data-i18n="last30days">آخر 30 يوم</span>
-          <span class="stat-value" id="visits-30d">0</span>
-          <div class="stat-change" id="change-30d"></div>
-        </div>
-      </div>
+  .status-cards-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
 
-      <!-- أهم الدول -->
-      <div class="countries-section">
-        <div class="countries-header">
-          <h3>
-            <span data-i18n="majorCountries"></span>
-            <span class="tooltip-icon">ⓘ
-              <span class="tooltip-text" data-i18n="countriesHelp"></span>
-            </span>
-          </h3>
-        </div>
+  .status-card,
+  .stats-section {
+    width: 80%;
+    max-width: none;
+    margin-bottom: 15px;
+  }
 
+  .stat-value {
+    font-size: 20px;
+  }
 
-        <ul class="countries-list">
-          <li>
-            <div class="country-row">
-              <span class="country-name" data-i18n="top1"></span>
-              <span class="country-percent">30%</span>
-            </div>
-            <div class="country-bar">
-              <div class="country-fill" style="width:30%"></div>
-            </div>
-          </li>
-          <li>
-            <div class="country-row">
-              <span class="country-name" data-i18n="top2"></span>
-              <span class="country-percent">24%</span>
-            </div>
-            <div class="country-bar">
-              <div class="country-fill" style="width:24%"></div>
-            </div>
-          </li>
-          <li>
-            <div class="country-row">
-              <span class="country-name" data-i18n="top3"></span>
-              <span class="country-percent">9%</span>
-            </div>
-            <div class="country-bar">
-              <div class="country-fill" style="width:9%"></div>
-            </div>
-          </li>
-          <li>
-            <div class="country-row">
-              <span class="country-name" data-i18n="top4"></span>
-              <span class="country-percent">9%</span>
-            </div>
-            <div class="country-bar">
-              <div class="country-fill" style="width:9%"></div>
-            </div>
-          </li>
-          <li>
-            <div class="country-row">
-              <span class="country-name" data-i18n="top5"></span>
-              <span class="country-percent">3%</span>
-            </div>
-            <div class="country-bar">
-              <div class="country-fill" style="width:4%"></div>
-            </div>
-          </li>
-        </ul>
-      </div>
+  .stat-label,
+  .stat-change {
+    font-size: 13px;
+  }
+}
 
-      <span data-i18n="clickSiteN" style="display:none;">ألف</span>
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 1.5em;
+  }
 
-    <h4 class="visitorsLastUpdate">
-    <span data-i18n="lastUpdateLabel"> </span> 
-    
-    <span  >Dec 27, 2025</span>
-  </h4>
-   
-    </section>
-  </main>
-
-
-
-
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-brand">
-        <img src="/logo.png" alt="3rb.io Logo" class="footer-logo" />
-        <p class="footer-desc" data-i18n="footer_desc"></p>
-      </div>
-
-      <div class="footer-links">
-        <h4 data-i18n="footer_links">Quick Links</h4>
-        <ul>
-          <li>
-            <a href="https://3rb.io/" target="_blank" data-i18n="visit_game"></a>
-            </a>
-          </li>
-          <li>
-            <a href="https://docs.3rb.io/" target="_blank" data-i18n="docs"></a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="footer-social">
-        <h4 data-i18n="footer_social">Follow Us</h4>
-        <ul>
-          <li>
-            <a href="https://discord.gg/3rbio" target="_blank">Discord</a>
-          </li>
-          <li>
-            <a href="https://www.youtube.com/3rbio1" target="_blank">YouTube</a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/3rbofficial" target="_blank">Instagram</a>
-          </li>
-          <li>
-            <a href="https://www.tiktok.com/@3rbioofficial" target="_blank">TikTok</a>
-          </li>
-          <li><a href="https://x.com/3rbofficial" target="_blank">X</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p data-i18n="footer_text"></p>
-    </div>
-  </footer>
-  <div id="footer-container"></div>
-  <script src="/script.js"></script>
-</body>
-
-</html>
+  .status-card {
+    width: 80%;
+  }
+}
