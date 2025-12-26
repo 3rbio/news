@@ -70,6 +70,7 @@ function applyTranslations(lang) {
     }
   });
 
+  refreshAnimatedNumbers();
   // RTL support
   document.body.classList.toggle("rtl", lang === "ar");
 
@@ -160,8 +161,12 @@ function checkStatus() {
 // ===========================
 
 function getI18nClickSiteN() {
-  const el = document.querySelector("[data-i18n='clickSiteN']");
-  return el ? el.textContent.trim() : "ألف";
+  const lang = localStorage.getItem("lang") || "ar";
+  return window.translations &&
+    translations[lang] &&
+    translations[lang]["clickSiteN"]
+    ? translations[lang]["clickSiteN"]
+    : "ألف";
 }
 
 function formatShortNumber(value) {
