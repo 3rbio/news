@@ -3,6 +3,7 @@ window.translations = window.translations || {};
 window.translations["fr"] = {
   site_title: "3rb.io Arabe",
   visit_game: "Visiter le jeu",
+  game_status: "Statut",
   game_news: "Actualités du jeu",
   game_fixes: "Corrections",
   game_updates: "Mises à jour",

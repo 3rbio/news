@@ -32,7 +32,7 @@ async function loadLanguage(lang) {
       return;
     }
     const script = document.createElement("script");
-    script.src = `../assets/lang/${lang}.js`;
+    script.src = `./assets/lang/${lang}.js`;
     script.dataset.langScript = lang;
     script.onload = () => resolve();
     script.onerror = () => reject(`Could not load language file: ${lang}`);
@@ -57,9 +57,11 @@ function updateLangDisplay(lang) {
 }
 
 function applyTranslations(lang) {
-  if (!window.translations || !translations[lang]) return;
+  if (!window.translations || !translations[lang]) {
+    console.error(`No translations found for ${lang}`);
+    return;
+  }
 
-  // ترجمة النصوص العامة في الصفحة
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
     if (translations[lang][key]) {
@@ -68,16 +70,10 @@ function applyTranslations(lang) {
     }
   });
 
-  // تحديث نصوص "حالة الشبكة" فوراً باستخدام البيانات المخزنة
-  updateStatusUI(lang);
-  refreshAnimatedNumbers();
-  renderChange(stats.current7, stats.previous7, "change-7d");
-  renderChange(stats.current30, stats.previous30, "change-30d");
-  // هذا السطر هو المسؤول عن عكس اتجاه العناصر (ProgressBar والنصوص)
-  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
-
-  // دعم اتجاه النصوص RTL/LTR
+  // RTL support
   document.body.classList.toggle("rtl", lang === "ar");
+
+  // Adjust hero banner layout
   const hero = document.querySelector(".heroBanner .container");
   if (hero) {
     hero.style.gridTemplateColumns = lang === "ar" ? "1.5fr 1fr" : "1fr 1.5fr";

@@ -3,6 +3,7 @@ window.translations = window.translations || {};
 window.translations["tr"] = {
   site_title: "3rb.io Arapça",
   visit_game: "Oyunu Ziyaret Et",
+  game_status: "Durum",
   game_news: "Oyun Haberleri",
   game_fixes: "Düzeltmeler",
   game_updates: "Güncellemeler",

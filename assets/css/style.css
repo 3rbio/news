@@ -507,7 +507,6 @@ body:not(.rtl) .heroBanner .text-info {
 }
 
 .card--fixes {
-  /* Change the left border color for Fixes cards */
   border-left-color: #ffc107;
 }
 
@@ -530,6 +529,18 @@ body:not(.rtl) .heroBanner .text-info {
   /* Change the tag color for Fixes */
   background: #232534;
   color: #ffc107;
+}
+
+.card--status {
+  border-left-color: #00bcd4;
+}
+
+.card__category--status {
+  background: #232534;
+  color: #00bcd4;
+}
+.status_title {
+  color: #00bcd4 !important;
 }
 
 .card_enOnly {
@@ -574,7 +585,7 @@ body:not(.rtl) .heroBanner .text-info {
 .card__link:hover {
   text-decoration: underline;
 }
-
+body.rtl .status_title,
 body.rtl .news_title,
 body.rtl .updates_title,
 body.rtl .card__excerpt {

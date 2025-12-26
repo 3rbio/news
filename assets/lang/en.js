@@ -3,6 +3,7 @@ window.translations = window.translations || {};
 window.translations["en"] = {
   site_title: "3rb.io News",
   visit_game: "Visit Game",
+  game_status: "Status",
   game_news: "News",
   game_fixes: "Fixes",
   game_updates: "Updates",
@@ -176,4 +177,8 @@ window.translations["en"] = {
   top4: "🇯🇴 Jordan",
   top5: "🇮🇶 Iraq",
   lastUpdateLabel: "Last Update: ",
+  status_title: "3rb.io status in one place",
+  status_text:
+    "The new statistics page allows you to track game visits, the current status of the site, and a set of important data and statistics all in one place",
+  view_full_status: "View Status »",
 };

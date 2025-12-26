@@ -3,6 +3,7 @@ window.translations = window.translations || {};
 window.translations["ru"] = {
   site_title: "Агарио Арабский",
   visit_game: "Посетить игру",
+  game_status: "Статус",
   game_news: "Новости игры",
   game_fixes: "Исправления",
   game_updates: "Обновления",
