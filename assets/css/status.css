@@ -1,0 +1,274 @@
+/* ====== Variables ====== */
+:root {
+  --darkbg: #0d0e16;
+  --text-color: #f2f2f2;
+  --card-bg: #14151e;
+  --highlight-color: #444746;
+  --primary-color: #ff0066;
+  --Color: #00bcd4;
+  --line: #363a47;
+  --secondary-btn-bg: #282a37;
+  --darktext: #99aab5;
+}
+
+/* ====== Page Title ====== */
+.page-title {
+  text-align: center;
+  font-size: 2.8em;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: var(--text-color);
+}
+
+/* ====== Status Cards Container ====== */
+.status-cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* ====== Status Card ====== */
+.status-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
+  color: var(--text-color);
+}
+
+#status-indicator,
+#server-status-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: gray;
+}
+
+#status-indicator.online .dot {
+  background: #2ecc71;
+}
+#status-indicator.offline .dot {
+  background: #e74c3c;
+}
+#status-indicator.checking .dot {
+  background: #f1c40f;
+  animation: pulse 1s infinite;
+}
+
+#server-status-indicator.coming-soon .dot {
+  background: #f1c40f;
+}
+
+.status-meta {
+  margin-top: 8px;
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* ====== Stats Section ====== */
+.stats-section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background: var(--card-bg);
+  width: 90%;
+  border-radius: 12px;
+  border: 2px solid var(--line);
+  padding: 20px;
+}
+
+.stats-title {
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+/* ====== Stats Grid ====== */
+.stats-grid {
+  display: flex;
+  justify-content: center; /* تمركز العناصر أفقياً */
+  align-items: center; /* تمركز العناصر عمودياً */
+  gap: 18px;
+  flex-wrap: wrap; /* يسمح بالانتقال للسطر التالي */
+}
+
+.stat-card {
+  background: var(--darkbg);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 300px; /* عرض ثابت لكل بطاقة */
+}
+
+.stat-label {
+  font-size: 14px;
+  opacity: 0.7;
+}
+.stat-value {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--Color);
+}
+.stat-change {
+  margin-top: 6px;
+  font-size: 13px;
+}
+.stat-change.up {
+  color: var(--Color);
+}
+.stat-change.down {
+  color: #e74c3c;
+}
+
+/* ====== Countries Section ====== */
+.countries-section {
+  margin-top: 35px;
+  background: var(--darkbg);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.countries-header h3 {
+  margin: 0 0 8px;
+}
+
+.help-text {
+  display: block;
+  font-size: 13px;
+  opacity: 0.65;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.countries-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.countries-list li {
+  margin-bottom: 14px;
+}
+
+.country-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+
+.country-name {
+  font-weight: 500;
+}
+.country-percent {
+  font-weight: bold;
+  color: var(--Color);
+}
+
+.country-bar {
+  margin-top: 6px;
+  height: 8px;
+  background: var(--card-bg);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.country-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--Color), var(--Color));
+  border-radius: 6px;
+  transition: width 0.6s ease;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+  .status-cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tooltip container */
+.tooltip-icon {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 0.9em;
+  color: var(--line);
+  margin-left: 5px;
+}
+
+/* Tooltip text */
+.tooltip-icon .tooltip-text {
+  visibility: hidden;
+  width: 280px;
+  background-color: var(--secondary-btn-bg);
+  color: #fff;
+  text-align: left;
+  padding: 8px 12px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%; /* فوق الأيقونة */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 13px;
+  line-height: 1.5;
+  pointer-events: none;
+}
+
+/* Tooltip arrow */
+.tooltip-icon .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* أسفل الصندوق */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #222 transparent transparent transparent;
+}
+
+/* Show tooltip on hover */
+.tooltip-icon:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+body.rtl .tooltip-text {
+  text-align: right !important; /* عند وجود كلاس rtl اجعله يمين */
+}
+
+.visitorsLastUpdate {
+  color: var(--darktext);
+  text-align: left;
+  margin-bottom: 0px;
+}
+
+body.rtl .visitorsLastUpdate {
+  text-align: right !important; /* عند وجود كلاس rtl اجعله يمين */
+}

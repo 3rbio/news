@@ -149,4 +149,36 @@ window.translations["tr"] = {
   event1_end4: "Real",
   /* Updates Page */
   updatesPage_Title: "Oyunun Son Güncellemeleri",
+
+  /* Status Page */
+  statusPage_Title: "3rb.io - 3rb.io Arapça Site İstatistikleri",
+  clickSiteN: "bin",
+  status_checking: "Kontrol ediliyor...",
+  status_checking1: "Sunucu durumu",
+  lastCheck1: "Yakında" /* TEMP */,
+  last_update: "Son güncelleme:",
+  country: "Ülke",
+  encryption_status: "Şifreleme durumu",
+  connection_status: "Bağlantı durumu",
+  status_online: "Site durumu",
+  status_offline: "Site çevrimdışı",
+  tls_strong: "Güçlü",
+  tls_medium: "Orta",
+  tls_weak: "Zayıf",
+  scheme_secure: "Güvenli",
+  scheme_weak: "Zayıf",
+  last30days: "Son 30 gün",
+  lastweek: "Son 7 gün",
+  majorCountries: "Başlıca Ülkeler",
+  countriesHelp:
+    "Bu, kullanıcıların belirtilen süre içinde Google arama sonuçlarından sitenize tıkladıkları coğrafi konumu gösterir",
+  visitorStatistics: "Ziyaretçi İstatistikleri",
+  visitorsHelp:
+    "Bunlar, belirtilen süre içinde Google arama sonuçları üzerinden 3rb.io Arapça sitesinin ziyaretçi istatistikleridir",
+  top1: "🇪🇬 Mısır",
+  top2: "🇸🇦 Suudi Arabistan",
+  top3: "🇩🇿 Cezayir",
+  top4: "🇯🇴 Ürdün",
+  top5: "🇮🇶 Irak",
+  lastUpdateLabel: "Son güncelleme:",
 };

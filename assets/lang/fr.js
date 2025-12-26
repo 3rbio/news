@@ -156,4 +156,36 @@ window.translations["fr"] = {
 
   /* Updates Page */
   updatesPage_Title: "Dernières mises à jour du jeu",
+
+  /* Status Page */
+  statusPage_Title: "3rb.io - Statistiques du site 3rb.io en arabe",
+  clickSiteN: "mille",
+  status_checking: "Vérification...",
+  status_checking1: "État du serveur",
+  lastCheck1: "Bientôt" /* TEMP */,
+  last_update: "Dernière mise à jour :",
+  country: "Pays",
+  encryption_status: "État du chiffrement",
+  connection_status: "État de la connexion",
+  status_online: "État du site",
+  status_offline: "Site hors ligne",
+  tls_strong: "Fort",
+  tls_medium: "Moyen",
+  tls_weak: "Faible",
+  scheme_secure: "Sécurisé",
+  scheme_weak: "Faible",
+  last30days: "30 derniers jours",
+  lastweek: "7 derniers jours",
+  majorCountries: "Principaux pays",
+  countriesHelp:
+    "Cela indique la localisation géographique des utilisateurs ayant cliqué sur votre site web depuis les résultats de recherche Google pendant la période spécifiée",
+  visitorStatistics: "Statistiques des visiteurs",
+  visitorsHelp:
+    "Voici les statistiques des visiteurs du site arabe 3rb.io via les résultats de recherche Google pendant la période spécifiée",
+  top1: "🇪🇬 Égypte",
+  top2: "🇸🇦 Arabie Saoudite",
+  top3: "🇩🇿 Algérie",
+  top4: "🇯🇴 Jordanie",
+  top5: "🇮🇶 Irak",
+  lastUpdateLabel: "Dernière mise à jour :",
 };
