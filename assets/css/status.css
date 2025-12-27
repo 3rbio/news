@@ -11,11 +11,6 @@
   --darktext: #99aab5;
 }
 
-html,
-body {
-  overflow-x: hidden;
-}
-
 /* ====== Page Title ====== */
 .page-title {
   text-align: center;
