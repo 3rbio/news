@@ -180,7 +180,7 @@ window.translations["ru"] = {
   top2: "🇸🇦 Саудовская Аравия",
   top3: "🇩🇿 Алжир",
   top4: "🇯🇴 Иордания",
-  top5: "🇮🇶 Ирак",
+  top5: "🇲🇦 Марокко",
   lastUpdateLabel: "Последнее обновление:",
   status_title: "Статус 3rb.io в одном месте",
   status_text:
