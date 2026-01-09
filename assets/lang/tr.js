@@ -180,7 +180,7 @@ window.translations["tr"] = {
   top2: "🇸🇦 Suudi Arabistan",
   top3: "🇩🇿 Cezayir",
   top4: "🇯🇴 Ürdün",
-  top5: "🇮🇶 Irak",
+  top5: "🇲🇦 Fas",
   lastUpdateLabel: "Son güncelleme:",
   status_title: "3rb.io durumu tek bir yerde",
   status_text:
