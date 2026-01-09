@@ -175,7 +175,7 @@ window.translations["en"] = {
   top2: "🇸🇦 Saudi Arabia",
   top3: "🇩🇿 Algeria",
   top4: "🇯🇴 Jordan",
-  top5: "🇮🇶 Iraq",
+  top5: "🇲🇦 Morocco",
   lastUpdateLabel: "Last Update: ",
   status_title: "3rb.io status in one place",
   status_text:
