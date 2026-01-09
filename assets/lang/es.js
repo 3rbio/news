@@ -183,7 +183,7 @@ window.translations["es"] = {
   top2: "🇸🇦 Arabia Saudita",
   top3: "🇩🇿 Argelia",
   top4: "🇯🇴 Jordania",
-  top5: "🇮🇶 Irak",
+  top5: "🇲🇦 Marruecos",
   lastUpdateLabel: "Última actualización: ",
   status_title: "Estado de 3rb.io en un solo lugar",
   status_text:
