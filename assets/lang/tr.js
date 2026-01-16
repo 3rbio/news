@@ -176,11 +176,11 @@ window.translations["tr"] = {
   visitorStatistics: "Ziyaretçi İstatistikleri",
   visitorsHelp:
     "Bunlar, belirtilen süre içinde Google arama sonuçları üzerinden 3rb.io Arapça sitesinin ziyaretçi istatistikleridir",
-  top1: "🇪🇬 Mısır",
-  top2: "🇸🇦 Suudi Arabistan",
-  top3: "🇩🇿 Cezayir",
-  top4: "🇯🇴 Ürdün",
-  top5: "🇲🇦 Fas",
+  top1: "🇸🇦 Suudi Arabistan",
+  top2: "🇪🇬 Mısır",
+  top3: "🇯🇴 Ürdün",
+  top4: "🇩🇿 Cezayir",
+  top5: "🇮🇶 Irak",
   lastUpdateLabel: "Son güncelleme:",
   status_title: "3rb.io durumu tek bir yerde",
   status_text:
