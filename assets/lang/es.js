@@ -179,11 +179,11 @@ window.translations["es"] = {
   visitorStatistics: "Estadísticas de visitantes",
   visitorsHelp:
     "Estas son las estadísticas de visitantes del sitio árabe 3rb.io a través de los resultados de búsqueda de Google durante el período especificado",
-  top1: "🇪🇬 Egipto",
-  top2: "🇸🇦 Arabia Saudita",
-  top3: "🇩🇿 Argelia",
-  top4: "🇯🇴 Jordania",
-  top5: "🇲🇦 Marruecos",
+  top1: "🇸🇦 Arabia Saudita",
+  top2: "🇪🇬 Egipto",
+  top3: "🇯🇴 Jordania",
+  top4: "🇩🇿 Argelia",
+  top5: "🇮🇶 Irak",
   lastUpdateLabel: "Última actualización: ",
   status_title: "Estado de 3rb.io en un solo lugar",
   status_text:
