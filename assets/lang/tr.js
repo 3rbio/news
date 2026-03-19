@@ -148,6 +148,24 @@ window.translations["tr"] = {
     "Yarışmaların canlı yayınları ve mücadeleler real-event kanalı üzerinden yapılacaktır",
   event1_end3: "Real Sunucu Bağlantısı",
   event1_end4: "Real",
+
+  /* News Page - 3rb.io Username System */
+  Playtesters_title: "3rb.io • Test Sürümü",
+  Playtesters_des1: "3rb.io test sürümü ilk kez yayınlandı",
+  Playtesters_des2:
+    "Bu sürüm, oyunun en güncel versiyonuna erişim sağlıyor, ancak hâlâ sürekli güncelleniyor ve geliştiriliyor",
+  Playtesters_des4:
+    "Bir testçi sistemi oluşturuldu: Bu sürüme erişmesine izin verilen bir oyuncu grubu, oyunu deneyip güncellemeleri ve geliştirmeleri anlık olarak test edebiliyor",
+  Playtesters_des6:
+    "Amaç, geliştirme deneyimini iyileştirmek ve varsa hataları hızla düzeltmek ve güncellemeleri hızlandırmak",
+  Playtesters_features: "Testçi Ekibinin Özellikleri",
+  Playtesters_feature1: "Yıl boyunca test sürümüne erişim",
+  Playtesters_feature2: "Geliştirici ekiple doğrudan iletişim",
+  Playtesters_feature3: "Testçi ekibi için özel bir bölüm",
+  Playtesters_feature4:
+    "Resmî sürüm yayınlandıktan sonra bile özel ve ayrıcalıklı özellikler! Sadece testçi ekibi için",
+  Playtesters_end1:
+    "Ekip oyun yönetimi tarafından seçilir; bu özellik talep edilemez",
   /* Updates Page */
   updatesPage_Title: "Oyunun Son Güncellemeleri",
 
@@ -176,10 +194,10 @@ window.translations["tr"] = {
   visitorStatistics: "Ziyaretçi İstatistikleri",
   visitorsHelp:
     "Bunlar, belirtilen süre içinde Google arama sonuçları üzerinden 3rb.io Arapça sitesinin ziyaretçi istatistikleridir",
-  top1: "🇸🇦 Suudi Arabistan",
-  top2: "🇪🇬 Mısır",
-  top3: "🇯🇴 Ürdün",
-  top4: "🇩🇿 Cezayir",
+  top1: "🇪🇬 Mısır",
+  top2: "🇸🇦 Suudi Arabistan",
+  top3: "🇩🇿 Cezayir",
+  top4: "🇯🇴 Ürdün",
   top5: "🇮🇶 Irak",
   lastUpdateLabel: "Son güncelleme:",
   status_title: "3rb.io durumu tek bir yerde",
