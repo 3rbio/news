@@ -14,11 +14,11 @@ const STATUS_URL = "https://3rb.io/cdn-cgi/trace";
 // متغيرات عالمية لحفظ حالة البيانات وتجنب إعادة طلبها عند تغيير اللغة
 let lastTraceData = null;
 const stats = {
-  current7: 1160,
-  previous7: 1230,
-  current30: 5180,
-  previous30: 5230,
-  updatedAt: "16 يناير 2026",
+  current7: 1259,
+  previous7: 1160,
+  current30: 12800,
+  previous30: 5180,
+  updatedAt: "19 ماس 2026",
 };
 
 // ===========================
