@@ -150,6 +150,24 @@ window.translations["es"] = {
     "Desafíos y cobertura en vivo de las competiciones a través del canal real-event",
   event1_end3: "Enlace del servidor Real",
   event1_end4: "Real",
+  /* News Page - 3rb.io Playtesters Update */
+  Playtesters_title: "3rb.io • Versión de Prueba",
+  Playtesters_des1:
+    "La versión de prueba de 3rb.io se ha lanzado por primera vez",
+  Playtesters_des2:
+    "Esta versión permite acceder a la última versión completamente actualizada del juego, aunque todavía está en continuo desarrollo y actualización",
+  Playtesters_des4:
+    "Se ha creado un sistema de testers: un grupo de jugadores que pueden acceder a esta versión, probar el juego y testear las actualizaciones y desarrollos en tiempo real",
+  Playtesters_des6:
+    "El objetivo es mejorar la experiencia de desarrollo y acelerar las actualizaciones y la corrección de errores si los hay",
+  Playtesters_features: "Características del Equipo de Testers",
+  Playtesters_feature1: "Acceso a la versión de prueba durante todo el año",
+  Playtesters_feature2: "Comunicación directa con el equipo de desarrollo",
+  Playtesters_feature3: "Una sección dedicada al equipo de testers",
+  Playtesters_feature4:
+    "Funciones exclusivas, especialmente después del lanzamiento oficial! Solo para el equipo de testers",
+  Playtesters_end1:
+    "El equipo es seleccionado por la administración del juego; esta característica no se puede solicitar",
 
   /* Updates Page */
   updatesPage_Title: "Últimas actualizaciones del juego",
@@ -179,10 +197,10 @@ window.translations["es"] = {
   visitorStatistics: "Estadísticas de visitantes",
   visitorsHelp:
     "Estas son las estadísticas de visitantes del sitio árabe 3rb.io a través de los resultados de búsqueda de Google durante el período especificado",
-  top1: "🇸🇦 Arabia Saudita",
-  top2: "🇪🇬 Egipto",
-  top3: "🇯🇴 Jordania",
-  top4: "🇩🇿 Argelia",
+  top1: "🇪🇬 Egipto",
+  top2: "🇸🇦 Arabia Saudita",
+  top3: "🇩🇿 Argelia",
+  top4: "🇯🇴 Jordania",
   top5: "🇮🇶 Irak",
   lastUpdateLabel: "Última actualización: ",
   status_title: "Estado de 3rb.io en un solo lugar",
