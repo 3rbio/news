@@ -144,6 +144,24 @@ window.translations["en"] = {
   event1_end2:
     "Challenges and live coverage of the competitions via the real-event channel",
   event1_end3: "Real Server Link",
+  /* News Page - 3rb.io Playtesters Update */
+  Playtesters_title: "3rb.io • Playtest Version",
+  Playtesters_des1:
+    "3rb.io playtest version of 3rb.io has been launched for the first time",
+  Playtesters_des2:
+    "This version allows access to the latest fully updated version of the game, but it is still under continuous updates and development",
+  Playtesters_des4:
+    "A playtesters system has been created—a group of players who are allowed to access this version, try the game, and test updates and developments in real time",
+  Playtesters_des6:
+    "The goal is to improve the development experience and speed up updates and bug fixes if any",
+  Playtesters_features: "Playtesters Team Features",
+  Playtesters_feature1: "Access to the playtest version throughout the year",
+  Playtesters_feature2: "Direct communication with the development team",
+  Playtesters_feature3: "A dedicated section for the playtesters team",
+  Playtesters_feature4:
+    "Exclusive features, especially after the official release! Only for the playtesters team",
+  Playtesters_end1:
+    "The team is selected by the game management; this feature cannot be requested",
   /* Updates Page */
   updatesPage_Title: "Latest Game Updates",
   /* Status Page */
@@ -171,10 +189,10 @@ window.translations["en"] = {
   visitorStatistics: "Visitor Statistics",
   visitorsHelp:
     "These are the visitor statistics for the Arabic 3rb.io site through Google search results during the specified period",
-  top1: "🇸🇦 Saudi Arabia",
-  top2: "🇪🇬 Egypt",
-  top3: "🇯🇴 Jordan",
-  top4: "🇩🇿 Algeria",
+  top1: "🇪🇬 Egypt",
+  top2: "🇸🇦 Saudi Arabia",
+  top3: "🇩🇿 Algeria",
+  top4: "🇯🇴 Jordan",
   top5: "🇮🇶 Iraq",
   lastUpdateLabel: "Last Update: ",
   status_title: "3rb.io status in one place",
@@ -182,4 +200,3 @@ window.translations["en"] = {
     "The new statistics page allows you to track game visits, the current status of the site, and a set of important data and statistics all in one place",
   view_full_status: "View Status »",
 };
- 
