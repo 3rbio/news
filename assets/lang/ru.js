@@ -147,6 +147,24 @@ window.translations["ru"] = {
   event1_end2: "Испытания и прямая трансляция соревнований в канале real-event",
   event1_end3: "Ссылка на сервер Real",
   event1_end4: "Real",
+  /* News Page - 3rb.io Playtesters Update */
+  Playtesters_title: "3rb.io • Version de Test",
+  Playtesters_des1:
+    "La version de test de 3rb.io a été lancée pour la première fois",
+  Playtesters_des2:
+    "Cette version permet d'accéder à la dernière version entièrement mise à jour du jeu, mais elle est encore en cours de mises à jour et de développement continu",
+  Playtesters_des4:
+    "Un système de testeurs a été créé : un groupe de joueurs autorisés à accéder à cette version, essayer le jeu et tester les mises à jour et développements en temps réel",
+  Playtesters_des6:
+    "L'objectif est d'améliorer l'expérience de développement et d'accélérer les mises à jour ainsi que la correction des bugs éventuels",
+  Playtesters_features: "Fonctionnalités de l'équipe de testeurs",
+  Playtesters_feature1: "Accès à la version de test tout au long de l'année",
+  Playtesters_feature2: "Communication directe avec l'équipe de développement",
+  Playtesters_feature3: "Une section dédiée à l'équipe de testeurs",
+  Playtesters_feature4:
+    "Fonctionnalités exclusives, surtout après le lancement officiel ! Réservé à l'équipe de testeurs",
+  Playtesters_end1:
+    "L'équipe est sélectionnée par la direction du jeu ; cette fonctionnalité ne peut pas être demandée",
 
   /* Updates Page */
   updatesPage_Title: "Последние обновления игры",
@@ -176,10 +194,10 @@ window.translations["ru"] = {
   visitorStatistics: "Статистика посетителей",
   visitorsHelp:
     "Это статистика посетителей арабского сайта 3rb.io по результатам поиска Google за указанный период",
-  top1: "🇸🇦 Саудовская Аравия",
-  top2: "🇪🇬 Египет",
-  top3: "🇯🇴 Иордания",
-  top4: "🇩🇿 Алжир",
+  top1: "🇪🇬 Египет",
+  top2: "🇸🇦 Саудовская Аравия",
+  top3: "🇩🇿 Алжир",
+  top4: "🇯🇴 Иордания",
   top5: "🇮🇶 Ирак",
   lastUpdateLabel: "Последнее обновление:",
   status_title: "Статус 3rb.io в одном месте",
